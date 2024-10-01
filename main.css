@@ -40,7 +40,7 @@ h4 ::before {
 }
 /*styling the buttons*/
 .accordion {
-    background-color: #eee;
+    background-color: whitesmoke;
     color: #444;
     cursor: pointer;
     padding: 18px;
@@ -53,7 +53,8 @@ h4 ::before {
 
 /* background color to the button when clicked */
 .active, .accordion:hover {
-    background-color: #ccc;
+    background-color: whitesmoke;
+    color: blue;
 }
 
 /*Style the accordion panel. Hidden by default */
