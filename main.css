@@ -1,4 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+
 body {
+    font-family: "Inter", sans-serif;
+    line-height: 1.6;
+    height: 100vh;
     background-color: whitesmoke;
     
 }
@@ -7,6 +14,22 @@ h2 {
     font-size: 40px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+h4 {
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+h4 ::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 30px;
+    background: pink;
+}
 
 .card {
     /* add shadow around card */
@@ -14,6 +37,7 @@ h2 {
     transition: 0.3s;
     border-radius: 4px;
     max-width: 300px;
+    margin: auto;
 }
 
 .card:hover {
@@ -23,7 +47,16 @@ h2 {
 
 .container {
     /*padding inside the card container*/
-    padding: 2px 16px;
+    width: 1200px;
+    max-width: 95%;
+    margin: auto;
+    height: 100%;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 img {
