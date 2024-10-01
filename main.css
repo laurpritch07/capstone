@@ -106,7 +106,7 @@ img {
 .cards-container .cards .card {
     background: pink;
     color: white;
-    flex: 0 0 40%;
+    flex: 0 0 31%;
     padding: 20px;
     border-radius: 5px;
 }
