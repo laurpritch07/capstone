@@ -64,10 +64,14 @@ img {
     border-radius: 4px 4px 0 0;;
 }
 
+.cards-container .cards {
+    flex-wrap: wrap;
+}
+
 .cards-container .cards .card {
     background: pink;
     color: white;
-    /*flex: 0 0 32%; */
+    flex: 0 0 31%;
     padding: 20px;
     border-radius: 5px;
 }
@@ -77,4 +81,12 @@ img {
     background: green;
     padding: 20px;
     border-radius: 50px;
+}
+
+/*responsive*/
+@media (max-with: 768px) {
+    .cards-container .cards .card {
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+    }
 }
