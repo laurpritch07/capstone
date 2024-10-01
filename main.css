@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: "Inter", sans-serif;
@@ -55,14 +59,15 @@ h4 ::before {
 
 .d-flex {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
 img {
     /*rounding top corners of card image*/
     border-radius: 4px 4px 0 0;;
 }
+/*card section*/
 
 .cards-container .cards {
     flex-wrap: wrap;
@@ -71,7 +76,7 @@ img {
 .cards-container .cards .card {
     background: pink;
     color: white;
-    flex: 0 0 31%;
+    flex: 0 0 33%;
     padding: 20px;
     border-radius: 5px;
 }
