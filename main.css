@@ -57,8 +57,9 @@ h4 ::before {
 .panel {
     padding: 0 18px;
     background-color: white;
-    display: none;
+    max-height: 0;
     overflow: hidden;
+    transition: max-height 0.2 ease-out;
 }
 
 
