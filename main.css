@@ -43,7 +43,7 @@ h4 ::before {
     background-color: white;
     color: #444;
     cursor: pointer;
-    padding: 18px;
+    /* padding: 18px; */
     width: 100%;
     text-align: left;
     border: none;
