@@ -63,3 +63,18 @@ img {
     /*rounding top corners of card image*/
     border-radius: 4px 4px 0 0;;
 }
+
+.cards-container .cards .card {
+    background: pink;
+    color: white;
+    /*flex: 0 0 32%; */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.card i {
+    margin-bottom: 20px;
+    background: green;
+    padding: 20px;
+    border-radius: 50px;
+}
