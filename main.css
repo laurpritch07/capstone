@@ -59,6 +59,7 @@ h4 ::before {
 /*Style the accordion panel. Hidden by default */
 .panel {
     padding: 0 18px;
+    column-count: 2;
     background-color: white;
     max-height: 0;
     overflow: hidden;
