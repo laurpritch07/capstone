@@ -21,8 +21,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
-
-
+    font-weight: 400;
 }
 
 
@@ -146,8 +145,10 @@ h1 {
 }
 
 h2 {
-    font-size: 40px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 32px;
+    font-family:"Inter";
+    font-weight: 300;
+    line-height: 62px;
 }
 
 h4 {
@@ -217,28 +218,44 @@ img {
     max-width: 100%; /*This makes the image adapt to the screen size)*/
 }
 
-.sidebar {
+/* .sidebar {
     position: absolute;
     top: 0;
     left: 0;
     height: 100vh;/*100 viewport height*/
-    width: 80px;
+    /* width: 80px;
     background-color: white;
     border-right: 1px solid black;
+    padding: 0.4rem 0.8rem;
+    transition: all 0.5s ease; */
+/* } */
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #e8e8e8;
     padding: 0.4rem 0.8rem;
     transition: all 0.5s ease;
 }
 
-.sidebar.active ~ .main-content {
+.sidebar ~ .main-content {
+    left: 250px;
+    width: calc(100% - 250px);
+}
+
+/* .sidebar.active ~ .main-content {
     left: 250px;
     width: calc(100% - 250px);
 }
 
 .sidebar.active {
     width: 250px;
-}
+} */
 
-.sidebar #btn {
+/* .sidebar #btn {
     position: absolute;
     color: black;
     top: .4rem;
@@ -247,11 +264,11 @@ img {
     line-height: 50px;
     transform: translateX(-50%);
     cursor: pointer;
-}
+} */
 
-.sidebar.active #btn { /* moves the menu icon to the right when open */
-    left:90%;
-}
+/* .sidebar.active #btn { /* moves the menu icon to the right when open */
+    /* left:90%; */
+/* } */ 
 
 .sidebar .top .logo {
     color: black;
@@ -259,16 +276,13 @@ img {
     height: 50px;
     align-items: center;
     pointer-events: none;
-    opacity: 0; /*set to 0 - so it doen't appear until active*/
 }
 
-.sidebar.active .top .logo {
-    opacity: 1;
-}
-.top .logo i {
+
+/* .top .logo i {
     font-size: 2rem;
     margin-right: 5px;
-}
+} */
 
 .sidebar ul li {
     position: relative;
@@ -287,10 +301,10 @@ img {
     border-radius: 0.8rem;
 }
 
-.sidebar ul li a:hover {
+/* .sidebar ul li a:hover {
     background-color: black;
     color: white;
-}
+} */
 
 
 .sidebar ul li a i {
@@ -301,15 +315,15 @@ img {
     line-height: 50px;
 }
 
-.sidebar .nav-item {
+/* .sidebar .nav-item {
     opacity: 0;
-}
+} */
 
-.sidebar.active .nav-item {
+/* .sidebar.active .nav-item {
     opacity: 1;
-}
+} */
 
-.sidebar ul li .tooltip {
+/* .sidebar ul li .tooltip {
     position: absolute;
     left: 125px;
     top:50%;
@@ -320,26 +334,26 @@ img {
     line-height: 1.8rem;
     z-index: 20;
     opacity: 0;
-}
+} */
 
-.sidebar ul li:hover .tooltip {
+/* .sidebar ul li:hover .tooltip {
     opacity: 1;
-}
+} */
 
-.sidebar.active ul li .tooltip {
+/* .sidebar.active ul li .tooltip {
     display: none;
-}
+} */
 
 .main-content {
     position: relative;
+    max-width: 960px;
     background-color: white;
     min-height: 100vh;
     top: 0;
     left: 80px;
     transition: all 0.5s ease;
-    width: calc(100% - 80px);
-
-
+    width: calc(100% - 250px);
+    margin-inline: auto;
 }
 
 
@@ -363,4 +377,12 @@ img {
     flex: 0 0 31%;
     padding: 20px;
     border-radius: 5px;
+}
+
+.category {
+    font-weight: 600;
+}
+
+.exploration-section {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
 }
