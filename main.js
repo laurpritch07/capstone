@@ -2,12 +2,7 @@ var acc = document.getElementsByClassName("accordion");
 var i;
 
 // /* Explorations Side Nav - Grabs Buttons */
-// let btn = document.querySelector('#btn')
-// let sidebar = document.querySelector('.sidebar')
 
-// btn. onclick = function () {
-//   sidebar.classList.toggle('active')
-// }
 
 for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
@@ -24,3 +19,9 @@ for (i = 0; i < acc.length; i++) {
       });
     }
 
+    let btn = document.querySelector('#btn')
+    let sidebar = document.querySelector('.sidebar')
+    
+    btn. onclick = function () {
+      sidebar.classList.toggle('active')
+    }
