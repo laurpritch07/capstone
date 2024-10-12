@@ -22,11 +22,16 @@
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
     font-weight: 400;
+    font-size: 18px;
 }
 
+html { font-size: clamp(1em, .4167vw + .8875em, 1.125em); }
 
 
-header {
+
+
+
+/* header {
     
     position:sticky;
     top: 0;
@@ -41,7 +46,7 @@ header {
     font-size: 14px;
     border-bottom: 1px solid black;
     padding-right: 72px;
-}
+} */
 
 h4 a {
     flex: 0 0 auto;
@@ -141,19 +146,26 @@ color: darkslategray;
   
 
 h1 {
-    font-size: 60px;
+    font-size: 3em;
+    line-height: 1.2em;
+    letter-spacing: 1%;
 }
 
 h2 {
-    font-size: 32px;
+    font-size: 2.498em;
     font-family:"Inter";
     font-weight: 300;
     line-height: 62px;
 }
 
+h3 {
+    font-size: 2.0801em;
+    line-height: 150%;
+}
+
 h4 {
     position: relative;
-    font-size: 24px;
+    font-size: 1.7321em;
     font-weight: 600;
 }
 
@@ -164,6 +176,27 @@ h4 ::before {
     height: 2px;
     width: 30px;
 }
+
+h5 {
+    font-size: 1.4422em;
+}
+
+h6 {
+    font-size: 1.2009em;
+}
+
+small { font-size: .8327em; }
+
+html { font-size: clamp(1em, .4167vw + .8875em, 1.125em); }
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+
+p {
+    font-size: 18px;
+}
+
 /*styling the buttons*/
 .accordion {
     cursor: pointer;
@@ -230,11 +263,16 @@ img {
     transition: all 0.5s ease; */
 /* } */
 
+.wrapper {
+    display: flex;
+}
+
 .sidebar {
-    position: absolute;
+    position: -webkit-sticky;
+    position: sticky;
     top: 0;
     left: 0;
-    height: 100%;
+    height: 100vh;
     width: 250px;
     background-color: #e8e8e8;
     padding: 0.4rem 0.8rem;
@@ -345,15 +383,22 @@ img {
 } */
 
 .main-content {
-    position: relative;
-    max-width: 960px;
+    /* position: relative; */
+    max-width: 1200px;
     background-color: white;
     min-height: 100vh;
     top: 0;
-    left: 80px;
     transition: all 0.5s ease;
-    width: calc(100% - 250px);
+    /* width: calc(100% - 250px); */
     margin-inline: auto;
+    padding-top: 72px;
+    padding-bottom: 72px;
+}
+
+.content-section {
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+
 }
 
 
@@ -385,4 +430,14 @@ img {
 
 .exploration-section {
     border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.content-lists {
+    list-style-type: circle;
+    list-style-position: inside;
+    padding: 20px;
+}
+
+ul li {
+    padding: 10px;
 }
