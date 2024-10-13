@@ -385,17 +385,12 @@ img {
     max-width: 100%; /*This makes the image adapt to the screen size)*/
 }
 
-.subsection {
-    border-bottom: 1px solid #191609;
-    padding-bottom: 20px;
-}
-
 .subsection h3 {
     padding-top: 1rem;
-    padding-bottom: .25rem;
+    font-weight: 600;
 }
 
-.content-lists {
-    list-style: circle;
-    padding: 1rem;
+.subsection {
+    border-bottom: 1px solid #191609;;
 }
+
