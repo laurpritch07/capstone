@@ -106,11 +106,13 @@ h4 a {
     align-items: center;
     text-decoration: none;
     cursor: pointer;
-    padding: 2rem 1rem;
+    padding: 2rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 .subtitle {
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 600;
 }
 
@@ -158,6 +160,7 @@ h4 a {
 .menu-item a {
     padding: 0;
     text-decoration: none;
+    color: var(--black);
 }
 
 .menu-item__sub {
@@ -218,7 +221,7 @@ h4 a {
 
 .content {
     flex: 1 1 0;
-    padding: 2rem;
+    padding-top: 4rem;
     max-width: 1200px;
     margin: auto;
 }
