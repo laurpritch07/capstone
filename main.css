@@ -80,17 +80,24 @@ p {
 }
 
 .sidebar {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     left: 0;
     flex: 1 1 0;
     max-width: 300px;
-    padding: 2rem 1rem;
-    background-color: rgb(244, 244, 244);
+    /* padding: 2rem 1rem; */
+    background-color: white;
     height: 100vh;
+    border-right: .5px solid var(--neutral100);
 
 }
+
+
+.top {
+    border-bottom: 1px solid var(--black);
+}
+
+/* logo */
 
 h4 a {
     color: black;
@@ -99,6 +106,12 @@ h4 a {
     align-items: center;
     text-decoration: none;
     cursor: pointer;
+    padding: 2rem 1rem;
+}
+
+.subtitle {
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 .sidebar h3 {
@@ -111,6 +124,7 @@ h4 a {
 .sidebar .menu {
     margin: 0 -1rem;
     overflow: hidden;
+    padding: 2rem 2rem;
 }
 
 .sidebar .menu .menu-item{
@@ -122,11 +136,12 @@ h4 a {
     font-size: 1rem;
     /* border-top: 1px solid var(--black); */
     overflow: hidden;
+
 }
 
 .btn {
     display: block;
-    padding: .5rem 1.2rem;
+    padding: .5rem .5rem;
     position: relative;
 }
 
@@ -138,6 +153,11 @@ h4 a {
     left: 1.5rem;
     bottom: -0.5rem;
     transform: rotate(45deg);
+}
+
+.menu-item a {
+    padding: 0;
+    text-decoration: none;
 }
 
 .menu-item__sub {
@@ -189,10 +209,11 @@ h4 a {
 
 .sidebar .menu .menu-item:hover,
 .sidebar .menu .menu-item.is-active {
-    color: #4BB166;
-    border-right: 5px solid #4BB166;
+    color: var(--black);
+    /* border-right: 5px solid #4BB166; */
     background-color: rgb(244, 244, 244);
     font-weight: 700;
+    border-radius: 1rem;
 }
 
 .content {
@@ -321,8 +342,17 @@ h4 a {
     display: grid;
     gap: 3rem;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-
   }
+
+  .rows {
+    float: left;
+    width: 100%;
+    padding: 20px 0px;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
   /*styling the buttons*/
 .accordion {
     cursor: pointer;
