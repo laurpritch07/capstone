@@ -65,8 +65,16 @@
 
                 <li class="menu-item" id="casestudy">
                             <a href="#casestudy" class="btn">Case Study</a>
-                            </li>
+                            </li>       
             </nav>
+
+            <div class="bottom">
+            <body onload="loadTime();">Last Updated<div id="demo"></div>
+            </div> 
+
+
+
+
 
         </aside>
   
@@ -121,19 +129,19 @@
     <section class="grid">
         <div class="card">
             <!-- <img src="img/code-screenshot.png" alt="Code Screenshot" style="width:100%"/> -->
-            <h4>Color</h4>
+            <h5>Color</h5>
+            <p class="body-small">
+                Corem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+        </div>
+        <div class="card">
+            <h5>Typography</h5>
             <p>
                 Corem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
         </div>
         <div class="card">
-            <h4>Typography</h4>
-            <p>
-                Corem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-        </div>
-        <div class="card">
-            <h4>Layout</h4>
+            <h5>Layout</h5>
             <p>
                 Corem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
@@ -210,6 +218,11 @@
 </div>
 
 <script>
+
+function loadTime() {
+      document.getElementById("demo").innerHTML = document.lastModified;
+    }
+
     const menu_toggle = document.querySelector('.menu-toggle');
     const sidebar = document.querySelector('.sidebar');
 

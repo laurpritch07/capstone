@@ -25,3 +25,7 @@ for (i = 0; i < acc.length; i++) {
     btn. onclick = function () {
       sidebar.classList.toggle('active')
     }
+
+    function loadTime() {
+      document.getElementById("demo").innerHTML = document.lastModified;
+  }
