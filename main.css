@@ -137,6 +137,7 @@ h4 a {
 .sidebar .menu .menu-item{
     display: block;
     padding: 1em;
+    margin: 1em 0em;
     color: #191609;
     text-decoration: none;
     transition: 0.2s linear;
@@ -221,7 +222,7 @@ h4 a {
     /* border-right: 5px solid #4BB166; */
     background-color: rgb(244, 244, 244);
     font-weight: 700;
-    border-radius: 1rem;
+    border-radius: .75rem;
 }
 
 .content {
