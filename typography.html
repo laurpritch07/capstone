@@ -72,15 +72,12 @@
   
     <main class="content">
         <div class="main-content">
-            <h1>Typography</h1>
+            <div class="heading">
+                <h1 class="page-heading">Typography</h1>
+            </div>
             <section class="subsection">
-                <h3>Overview</h3>
-                <h4 class="subtitle">Choosing a Font</h4>
-                    <div class="rows">
-                        <div class="column">
-                            <p>Sorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec</p>
-                        </div>
-                        <div class="column">
+                <h3>Accessibility Requirements</h3>
+                
                             <ul class="content-lists">
                                 <li>Alignment: left or right only (don’t justify)</li>
                                 <li>Minimum font size should be around 16px</li>
@@ -88,56 +85,80 @@
                                 <li>Paragraph spacing: at least 1.5x the line spacing</li>
                                 <li>Paragraph width: max. 80 characters; 40 for CJK characters</li>
                             </ul>
-                        </div>
-                    </div>
-                    
-
-                    
-                    <h4 class="subtitle">Type Scale</h4>
-                <div class="rows">
-                    <div class="column">
-                        <p>Sorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec 
-                        </p>
-                    </div>
-                    <div class="column">
-                      <ul class="content-lists">
-                    <li>Alignment: left or right only (don’t justify)</li>
-                    <li>Minimum font size should be around 16px</li>
-                    <li>Line spacing: at least 1.5x the font size</li>
-                    <li>Paragraph spacing: at least 1.5x the line spacing</li>
-                    <li>Paragraph width: max. 80 characters; 40 for CJK characters</li>
-                     </ul>
-                    </div>
-            </section>
-
-            <section class="subsection">
-                <h3>Research</h3>
-                <p>Sorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec <ul class="content-lists">
-                    <li>Thing one</li>
-                    <li>Thing one</li>
-                    <li>Thing one</li>
-                </ul>
-    
-                </p>
-            </div>
-    
-            <section class="subsection">
-                <h3>Process</h3>
-                <li>Thing one</li>
-                <p>Sorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar.
-                </p>
-                <ul class="content-lists">
-                    <li>Thing one</li>
-                    <li>Thing one</li>
-                </ul>
-
-                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/YYUsMBv4B5DjkXgtICwpmv/lpritchard_ag-plan?node-id=43-49&embed-host=share" allowfullscreen></iframe>
+                </section>
                 
-            </section>
+                <section class="subsection">
+                    <h3>Design Explorations</h3>
+                    <div class="tab">
+                        <button class="tablinks" onclick="openExploration(event, 'ex.1')" id="defaultOpen">Exploration 1</button>
+                        <button class="tablinks" onclick="openExploration(event, 'ex.2')">Exploration 2</button>
+                        <button class="tablinks" onclick="openExploration(event, 'ex.3')">Exploration 3</button>
+                      </div>
+
+                      <div id="ex.1" class="tabcontent">
+                        <!-- <h4 class="tab-heading">Exploration 1</h4> -->
+                         <div class="figma-embed">
+                            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="100%" src="https://embed.figma.com/design/YYUsMBv4B5DjkXgtICwpmv/lpritchard_ag-plan?node-id=606-63&embed-host=share" allowfullscreen></iframe>
+                         </div>
+                      </div>
+                      
+                      <div id="ex.2" class="tabcontent">
+                        <div class="figma-embed">
+                            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="100%" src="https://embed.figma.com/design/YYUsMBv4B5DjkXgtICwpmv/lpritchard_ag-plan?node-id=606-63&embed-host=share" allowfullscreen></iframe>
+                         </div>
+                      </div>
+                      
+                      <div id="ex.3" class="tabcontent">
+                        <div class="figma-embed">
+                            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="100%" src="https://embed.figma.com/design/YYUsMBv4B5DjkXgtICwpmv/lpritchard_ag-plan?node-id=606-63&embed-host=share" allowfullscreen></iframe>
+                         </div>
+                      </div>
+                </section>
+
+
+                <section class="subsection">
+                    <h3>Form (Best Practices)</h3>
+                    <ul class="content-lists">
+                        <li>Lorem ipsum dolor sit, consectetur adipiscing.</li>
+                        <li>Lorem ipsum dolor sit, consectetur adipiscing.</li>
+                        <li>Lorem ipsum dolor sit, consectetur adipiscing.</li>
+                        <li>Lorem ipsum dolor sit, consectetur adipiscing.</li>
+                        <li>Lorem ipsum dolor sit, consectetur adipiscing.</li>
+                    </ul>
+                </section>
+
+                <section class="subsection">
+                    <h3>Function (Best Practices)</h3>
+                    <ul class="content-lists">
+                        <li>Lorem ipsum dolor sit, consectetur adipiscing.</li>
+                        <li>Lorem ipsum dolor sit, consectetur adipiscing.</li>
+                        <li>Lorem ipsum dolor sit, consectetur adipiscing.</li>
+                        <li>Lorem ipsum dolor sit, consectetur adipiscing.</li>
+                        <li>Lorem ipsum dolor sit, consectetur adipiscing.</li>
+                    </ul>
+                </section>
+    
             <section class="subsection">
                 <h3>In-Use</h3>
-                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/YYUsMBv4B5DjkXgtICwpmv/lpritchard_ag-plan?node-id=43-49&embed-host=share" allowfullscreen></iframe>
+                <p>Lorem Ipsum</p>
+                <div class="figma-embed">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="100%" src="https://embed.figma.com/design/YYUsMBv4B5DjkXgtICwpmv/lpritchard_ag-plan?node-id=606-63&embed-host=share" allowfullscreen></iframe>
+                 </div>
+                
             </section>
+            <section class="resources subsection">
+                <h3>Resources</h3>
+             <ul class="content-lists">
+                <li class="resource-item">
+                    <a href="https://www.section508.gov/develop/fonts-typography/"></a>Understanding Accessible Fonts and Typography for Section 508 Compliance <i class='bx bx-link-external'></i></li>
+                    <li class="resource-item">
+                        <a href="https://www.section508.gov/develop/fonts-typography/"></a>Understanding Accessible Fonts and Typography for Section 508 Compliance <i class='bx bx-link-external'></i></li>
+                        <li class="resource-item">
+                            <a href="https://www.section508.gov/develop/fonts-typography/"></a>Understanding Accessible Fonts and Typography for Section 508 Compliance <i class='bx bx-link-external'></i></li>
+                            <li class="resource-item">
+                                <a href="https://www.section508.gov/develop/fonts-typography/"></a>Understanding Accessible Fonts and Typography for Section 508 Compliance <i class='bx bx-link-external'></i></li>
+                </ul>
+            </div>
     </main>
 </div>
 
@@ -169,8 +190,24 @@ for (i = 0; i < acc.length; i++) {
       });
     }
 
-   
+function openExploration(evt, explorationName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(explorationName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
 </script>
+
 
 </body>
 </html>

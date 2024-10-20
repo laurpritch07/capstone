@@ -18,8 +18,9 @@
 
 /* typography*/
 
+
 h1 {
-    font-size: 3em;
+    font-size: 2em;
     line-height: 1.2em;
     letter-spacing: 1%;
 }
@@ -236,8 +237,12 @@ h4 a {
 
 .content h1 {
     color: #191609;
-    font-size: 3em;
+    font-size: 6em;
     margin-bottom: 1rem;
+}
+
+.heading {
+
 }
 
 .content p {
@@ -364,7 +369,63 @@ h4 a {
     gap: 3rem;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
+
+/* Explorations Section*/
+.tab {
+    overflow: hidden;
+    /* border: 1px solid #ccc; */
+    background-color: white;
+    padding-bottom: 1rem;
+  }
+
+  .tab-heading {
+    font-size: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
   
+  /* Style the buttons that are used to open the tab content */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 12px 16px;
+    transition: 0.3s;
+    margin-right: 1em;
+    border-radius: 4px;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ffffff;
+    border: 1px solid #191609;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #191609;
+    border: 1px solid #191609;
+    color: white;
+    border-radius: 4px;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    /* padding: 6px 12px; */
+    /* border: 1px solid #ccc; */
+    border-top: none;
+  }
+  
+
+  .figma-embed { height:65vh; display:flex; }
+
+
+
+
+
   /*styling the buttons*/
 .accordion {
     cursor: pointer;
@@ -435,17 +496,41 @@ img {
 
 .subsection {
     border-bottom: 1px solid #191609;
-    padding-bottom: 20px;
+    padding-bottom: 3rem;
 }
 
 .subsection h3 {
+    font-size: 2rem;
+    font-weight: 600;
     padding-top: 2rem;
+    color: #4BB166;
+    padding-bottom: 1rem;;
 }
 
 .content-lists {
-    list-style: circle;
+    /* list-style: circle; */
+    list-style: decimal;
+    line-height: 150%;
+    font-size: 2.5em;
+    padding-left: 1em;
+}
+
+/* .resources {
+    background-color: #4BB166; */
+
+/* } */
+
+.resource-item {
     padding: 1rem;
 }
+
+.resource-item:hover {
+    /* list-style: circle; */
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
 
 .design-tag {
     font-size: .8327em;  
