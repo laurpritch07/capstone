@@ -484,6 +484,9 @@ h4 a {
 .card:hover {
     /*on hover, deepen shadow*/
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    background-color: #191609;
+    color: #ffffff;
+    cursor: pointer;
 }
 
 
@@ -515,13 +518,43 @@ img {
     padding-left: 1em;
 }
 
+.resource-list {
+    list-style: none;
+    line-height: 150%;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.resource-category {
+    list-style: none;
+    line-height: 150%;
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+}
+
 /* .resources {
     background-color: #4BB166; */
 
 /* } */
 
+.resource-li {
+    font-weight: 400;
+    font-size: 1rem;
+    list-style: none;
+}
+
+.resource-li:hover {
+    /* list-style: circle; */
+    text-decoration: underline;
+    cursor: pointer; 
+    font-weight: 400;
+    font-size: 1rem;
+    list-style: none;
+}
+
 .resource-item {
-    padding: 1rem;
+    padding-bottom: 1rem;
 }
 
 .resource-item:hover {
@@ -551,3 +584,22 @@ img {
 .subsection p {
     padding-bottom: 1rem;
 }
+
+.resource-column {
+    float: left;
+    width: 25%;
+  }
+  
+  /* Clear floats after the columns */
+  .resource-row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Responsive layout - when the screen is less than 600px wide, make the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .resource-column {
+      width: 100%;
+    }
+  }
