@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <!--a viewport declaration which does not disable zooming-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--a non-blocking base 64-encoded font resource-->
+        <link rel="stylesheet" href="fonts.css" media="none" onload="if(media!='all')media='all'">
+        <noscript><link rel="stylesheet" href="fonts.css"></noscript>
+
+        <!--a non-blocking stylesheet-->
+        <link rel="stylesheet" href="main.css" media="none" onload="if(media!='all')media='all'">
+        <noscript><link rel="stylesheet" href="main.css"></noscript>
+        
+        <!--Icon link -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>Design –  Accessibly</title>
+    </head>
+
+    <body>
+        <!--Skip link for keyboard users-->
+        <a href="#main">skip to main content</a>
+
+        <!--logo/page navigation goes here-->
+
+        <header class="header__content">    
+                <a href="index.html" class="logo"><!--#main will be better for screenreaders, but is keeping the name from showing up-->
+                    Accessibly
+                </a>
+
+            <nav>
+                <ul class="nav__list">
+                    <li><a href="plan.html" class="nav__link">Plan</a></li>
+                    <li><a href="#" class="nav__link">Design</a></li>
+                    <li><a href="develop.html" class="nav__link">Develop</a></li>
+                    <li><a href="resources.html" class="nav__link">Resources</a></li>
+                    <li><a href="about.html" class="nav__link">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!--Unique content of page goes here-->
+        <main id="main">
+            <h1> Design Accessibly</h1>
+            <div class="more"></div>
+                        <p>Dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum
+                            est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus,
+                            ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus.
+                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                            Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex.
+                            Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis
+                            convallis diam sit amet lacinia. Aliquam in elementum tellus.
+                            Curabitur tempor quis eros tempus lacinia. Nam bibendum pellentesque quam a convallis. Sed ut
+                            vulputate nisi. Integer in felis sed leo vestibulum venenatis. Suspendisse quis arcu sem. Aenean
+                            feugiat ex eu vestibulum vestibulum. Morbi a eleifend magna. Nam metus lacus, porttitor eu
+                            mauris a, blandit ultrices nibh. Mauris sit amet magna non ligula vestibulum eleifend. Nulla
+                            varius volutpat turpis sed lacinia. Nam eget mi in purus lobortis eleifend. Sed nec ante dictum
+                            sem condimentum ullamcorper quis venenatis nisi. Proin vitae facilisis nisi, ac posuere leo.
+                        </p>
+                    </div>
+           
+            <section class="color-block">
+                <div class="single-accordian">
+                    <div class="accordian-title">
+                        <h2>Color</h2>
+                    </div>
+                    
+                    <button class="accordion"><h3>Use of Color</h3></button>
+                    <div class="panel">
+                        <div class="guidelines">
+                            <h4>WCAG says:</h4>
+                            <p>lorem ipsum</p>
+                        </div>
+                        <div class="best">
+                            <h4>Best Practices</h4>
+                            <p>lorem ipsum</p>
+                        </div>
+                        <div class="test">
+                            <h4>Test It</h4>
+                            <p>lorem ipsum</p>
+                        </div>
+                        <div class="example">
+                            <h4>Example</h4>
+                            <p>lorem ipsum</p>
+                            <image  src="/img/COLOR.png" class="about-image" alt="Frankie being cute"></image>
+                        </div>
+                        <div class="resources">
+                            <h4>Resources</h4>
+                            <p>lorem ipsum</p>
+                        </div>
+                    </div>
+                    
+                    <button class="accordion"><h3>Contrast Minimum</h3></button>
+                    <div class="panel">
+                      <p>Lorem ipsum...</p>
+                    </div>
+                    
+                    <button class="accordion"><h3>Non-Text Contrast</h3></button>
+                    <div class="panel">
+                      <p>Lorem ipsum...</p>
+                    </div> 
+                </div>
+
+                <div class="single-accordian">
+                    <div class="accordian-title">
+                        <h2>Typography</h2>
+                    </div>
+                    
+                    <button class="accordion"><h3>Use of Color</h3></button>
+                    <div class="panel">
+                      <h4>WCAG Guidelines</h4>>
+                    </div>
+                    
+                    <button class="accordion"><h3>Contrast Minimum</h3></button>
+                    <div class="panel">
+                      <p>Lorem ipsum...</p>
+                    </div>
+                    
+                    <button class="accordion"><h3>Non-Text Contrast</h3></button>
+                    <div class="panel">
+                      <p>Lorem ipsum...</p>
+                    </div> 
+                </div>
+
+                <div class="single-accordian">
+                    <div class="accordian-title">
+                        <h2>Layout/Hierarchy</h2>
+                    </div>
+                    
+                    <button class="accordion"><h3>Use of Color</h3></button>
+                    <div class="panel">
+                      <p>Lorem ipsum...</p>
+                    </div>
+                    
+                    <button class="accordion"><h3>Contrast Minimum</h3></button>
+                    <div class="panel">
+                      <p>Lorem ipsum...</p>
+                    </div>
+                    
+                    <button class="accordion"><h3>Non-Text Contrast</h3></button>
+                    <div class="panel">
+                      <p>Lorem ipsum...</p>
+                    </div> 
+                </div>
+
+                <div class="single-accordian">
+                    <div class="accordian-title">
+                        <h2>Interactivity</h2>
+                    </div>
+                    
+                    <button class="accordion"><h3>Use of Color</h3></button>
+                    <div class="panel">
+                      <p>Lorem ipsum...</p>
+                    </div>
+                    
+                    <button class="accordion"><h3>Contrast Minimum</h3></button>
+                    <div class="panel">
+                      <p>Lorem ipsum...</p>
+                    </div>
+                    
+                    <button class="accordion"><h3>Non-Text Contrast</h3></button>
+                    <div class="panel">
+                      <p>Lorem ipsum...</p>
+                    </div> 
+                </div>
+
+            
+                <div class="single-accordian">
+                    <div class="accordian-title">
+                        <h2>Media</h2>
+                    </div>
+                    
+                    <button class="accordion"><h3>Use of Color</h3></button>
+                    <div class="panel">
+                      <p>Lorem ipsum...</p>
+                    </div>
+                    
+                    <button class="accordion"><h3>Contrast Minimum</h3></button>
+                    <div class="panel">
+                      <p>Lorem ipsum...</p>
+                    </div>
+                    
+                    <button class="accordion"><h3>Non-Text Contrast</h3></button>
+                    <div class="panel">
+                      <p>Lorem ipsum...</p>
+                    </div> 
+                </div>
+            
+                </section>
+
+            <p class="pull-quote">As designers, it’s our responsibility to understand the power of the interactions we design for people. We design to embrace the things that make us human. It’s what drives us to create a world that makes lives better. The result is technology that’s inclusive.</p>
+            <section class="subsection">
+                <h2>Design Resources</h2>
+                <p>dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictumest a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus,
+                </p>
+                <a class="link default" href="resources.html">View all resources</a>
+            </section>
+            <footer>
+                <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
+                <p class="small">A project by Lauren Pritchard &copy;2024</p>
+            </footer>
+
+
+        </main>
+
+        <!--a non-blocking javascript resource-->
+        <script src="scripts.js">
+           
+
+        </script>
+    </body>
+</html>

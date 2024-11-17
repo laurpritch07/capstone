@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <!--a viewport declaration which does not disable zooming-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--a non-blocking base 64-encoded font resource-->
+        <link rel="stylesheet" href="fonts.css" media="none" onload="if(media!='all')media='all'">
+        <noscript><link rel="stylesheet" href="fonts.css"></noscript>
+
+        <!--a non-blocking stylesheet-->
+        <link rel="stylesheet" href="main.css" media="none" onload="if(media!='all')media='all'">
+        <noscript><link rel="stylesheet" href="main.css"></noscript>
+        
+        <!--Icon link -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>References –  Accessibly</title>
+    </head>
+
+    <body>
+        <!--Skip link for keyboard users-->
+        <a href="#main">skip to main content</a>
+
+        <!--logo/page navigation goes here-->
+
+        <header class="header__content">    
+                <a href="index.html" class="logo"><!--#main will be better for screenreaders, but is keeping the name from showing up-->
+                    Accessibly
+                </a>
+
+            <nav>
+                <ul class="nav__list">
+                    <li><a href="plan.html" class="nav__link">Plan</a></li>
+                    <li><a href="design.html" class="nav__link">Design</a></li>
+                    <li><a href="develop.html" class="nav__link">Develop</a></li>
+                    <li><a href="resources.html" class="nav__link">Resources</a></li>
+                    <li><a href="about.html" class="nav__link">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!--Unique content of page goes here-->
+        <main id="main">
+            <h1>References</h1>
+            <p>A collection of </p>
+        <section class="subsection">
+            <h2>Endnotes</h2>
+            <ol>
+                <li></li>
+                <li></li>
+            </ol>
+        </subsection>
+
+        <section class="subsection">
+            <h2>Bibliography</h2>
+            <h3>Articles</h3>
+            <ul class="">
+                <li></li>
+                <li></li>
+            </ul>
+            <h3>Books</h3>
+            <ul class="">
+                <li></li>
+                <li></li>
+            </ul>
+            <h3>Web Page</h3>
+            <ul class="">
+                <li></li>
+                <li></li>
+            </ul>
+            <h3>Video</h3>
+            <ul class="">
+                <li></li>
+                <li></li>
+            </ul>
+            <h3>Podcast</h3>
+            <ul class="">
+                <li></li>
+                <li></li>
+            </ul>
+        </subsection>
+
+        </div>
+           
+
+
+            <footer>
+                <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
+                <p class="small">A project by Lauren Pritchard &copy;2024</p>
+            </footer>
+
+
+        </main>
+
+        <!--a non-blocking javascript resource-->
+        <script src="scripts.js">
+           
+
+        </script>
+    </body>
+</html>

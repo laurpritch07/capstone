@@ -1,605 +1,346 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
-    --black: #191609;
-    --green: #4BB166;
-    --background: #f2f2f2;
-    --sidebar: rgb(244, 244, 244);
-    --neutral100: 
+    --black: #1a1a1a;
+    --green: #7bdcb5;
+    --yellow: #FFD100;
+    --pink: #f78da7;
+    --blue: #8ed1fc;
+    --neutral-300: #f5f5f5;
+    --background: #f8f8f8;
 }
 
-* {
+@media print {
+    body > *:not(main) {
+        display: none;
+    }
+}
+
+@media (max-width: 20em) {
+    .logo {
+        display: block;
+        text-align: center;
+    }
+
+}
+/*To make skip links available to keyboard users, we should bring into view on focus*/
+[href="#main"] {
+    position: absolute;
+    top: 0;
+    right: 100%;
+}
+
+[href="#main"]:focus {
+    right: auto;
+}
+
+html {
+    /* This algorithm ensures everything scales incrementally and proportionately relative to the viewport */
+    font-size: calc(1em + 1vw);
+    font-family: "Inter", sans-serif;
+    background: #f8f8f8;
+    margin: 1rem;
+    color: var(--black);
+    max-width: 45rem;
+    margin: 0 auto;
+}
+
+
+/* Header */
+
+.logo {
+    color: var(--black);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    background: var(--background);
+}
+
+
+/* Navigation goes here */
+.nav__list {
+    display: flex;
+    column-gap: 16px;
+    list-style: none;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: "Inter", sans-serif;
-    font-weight: 400px;
+    }
+
+.nav__link {
+    color: var(--black);
+    text-decoration: none;
+    transition: all 0.4s;
+    position: relative;
+    font-size: 16px;
+    padding: 8px;
+    }
+
+    
+    .logo {
+    font-size: 16px
+    }
+
+
+main {
+    /* This max-width ensures a line of text will measure to 60characters widet */
+    max-width: 50rem;
+    margin: 0 auto;
 }
 
-/* typography*/
-
-
-h1 {
-    font-size: 2em;
-    line-height: 1.2em;
-    letter-spacing: 1%;
+a.current-page {
+    display: inline-block;
+    padding: 0.5rem;
+    text-decoration: underline;
+    /* background: $highlight-color; */
+    background: pink;
 }
 
-h2 {
-    font-size: 2.498em;
-    font-family:"Inter";
-    font-weight: 300;
-    line-height: 62px;
-}
-
-h3 {
-    font-size: 2.0801em;
-    line-height: 150%;
-}
-
-h4 {
-    /* position: relative; */
-    font-size: 1.7321em;
-    font-weight: 600;
-}
-
-h4 ::before {
-    content: "";
+/* visually hidden class invokes a special set of properties devised to hide the element viusally w/o it becoming silenced by screenreader*/
+.visually-hidden {
     position: absolute;
-    left: 0;
-    height: 2px;
-    width: 30px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
 }
-
-h5 {
-    font-size: 1.4422em;
-}
-
-h6 {
-    font-size: 1.2009em;
-}
-
-
-.bottom { 
-    font-size: .8327em;     
-    padding-left: 2rem;
-    position: fixed;
-    bottom: 1rem;
-}
-
-html { font-size: clamp(1em, .4167vw + .8875em, 1.125em); }
-
-h1, h2, h3, h4, h5, h6 {
-	font-weight: normal;
+@media (min-width: 120rem) {
+    html {
+        font-size: 150%;
+    }
 }
 
 p {
+    margin: 1.5rem 0;
     font-size: 18px;
-    line-height: 150%;
+    line-height: 1.6;
+    color: #222;
 }
 
-/* Main*/
-
-.app {
-    display: flex;
-    min-height: 100vh;
+/* improved link underlines-underline doesn't intersect with descenders*/ 
+p a{
+ text-decoration: none;
+ text-shadow: 0.05em 0 0 #fff, -0.05em 0 0 #fff,
+    0 0.05em 0 #fff, 0 -0.05em 0 #fff,
+    0.1em 0 0 #fff, -0.1em 0 0 #fff,
+    0 0.1em 0 #fff, 0 -0.1em 0 #fff;
+background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
+background-repeat: repeat-x;
+background-position: bottom 0.05em center;
+background-size: 100% 0.05em;
 }
 
-.sidebar {
-    position: sticky;
-    top: 0;
-    left: 0;
-    flex: 1 1 0;
-    max-width: 300px;
-    /* padding: 2rem 1rem; */
-    background-color: white;
-    height: 100vh;
-    border-right: .5px solid var(--neutral100);
-
+/* Strengthen the appearance of focus style for paragraph links across browsers with background color solution. This creates a filled box which is easier to identify as focus moves*/  
+p a:focus {
+    outline: none;
+    background-color: #cef;
+    text-shadow: 0.05em 0 0 #cef, -0.05em 0 0 #cef,
+    0 0.05em 0 #cef, 0 -0.05em 0 #cef,
+    0.1em 0 0 #cef, -0.1em 0 0 #cef,
+    0 0.1em 0 #cef, 0 -0.1em 0 #cef;
+    
 }
 
 
-.top {
-    border-bottom: 1px solid var(--black);
+/* Text decoration fallback if older browser does not support gradient backgrounds*/
+.ie-lte-9 {
+    text-decoration: underline;
 }
 
-/* logo */
+.about-image {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: 50% 50%;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+}
 
-h4 a {
-    color: black;
-    display: flex;
-    height: 50px;
-    align-items: center;
-    text-decoration: none;
-    cursor: pointer;
-    padding: 2rem 2rem;
-    font-size: 1.5rem;
-    font-weight: 600;
+h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+
+}
+h2 {
+ font-weight: 400;
+ font-size: 1.75rem;
+ line-height: 1.5em;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.5em;
 }
 
 .subtitle {
-    font-size: 1.25rem;
+    font-size: .75rem;
     font-weight: 600;
 }
 
-.sidebar h3 {
+.subsection {
+    border-top: solid 1px var(--black);
+    padding-bottom: 2rem;
+}
+
+.center-50 {
+    max-width: 25rem;
+    margin: 1.5em auto;
+
+}
+
+.pull-quote {
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 2rem;
+}
+
+/* Buttons */
+.x-large {
+    text-align: left;
+    width: 100%;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: 1rem;
+    border-radius: .5rem;
+    border: none;
+    margin-top: 1rem;
     color: var(--black);
-    font-size: 1.25rem;
-    text-transform: uppercase;
-    margin-bottom: 2rem;
+    border: 2px solid var(--black);
+    background-color: var(--background);
 }
 
-.sidebar .menu {
-    margin: 0 -1rem;
-    overflow: hidden;
-    padding: 2rem 2rem;
+.x-large h3 {
+    margin-bottom: 0;
 }
 
-.sidebar .menu .menu-item{
-    display: block;
-    padding: 1em;
-    margin: 1em 0em;
-    color: #191609;
-    text-decoration: none;
-    transition: 0.2s linear;
-    font-size: 1rem;
-    /* border-top: 1px solid var(--black); */
-    overflow: hidden;
+.x-large p {
+    margin-top: 0;
+}
 
+.plan:hover {
+    background-color: var(--green);
+}
+
+.design:hover {
+    background-color: var(--yellow);
+}
+
+.development:hover {
+    background-color: var(--pink);
+}
+
+.planning:hover {
+    background-color: var(--blue);
 }
 
 .btn {
-    display: block;
-    padding: .5rem .5rem;
-    position: relative;
-}
-
-.btn::before {
-    content: '';
-    position: absolute;
-    width: 1rem;
-    height: 1rem;
-    left: 1.5rem;
-    bottom: -0.5rem;
-    transform: rotate(45deg);
-}
-
-
-
-.menu-item a {
-    padding: 0;
+    background-color: var(--background);
+    border: 2px solid var(--black);
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
     text-decoration: none;
+    color: var(--black)
+}
+
+.default:hover {
+    background: #e7e7e7;
+  }
+
+/* Paragraph styles */
+.small {
+    font-size: .5rem;
+}
+
+/* Scroll to the top button */
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 1rem; /* Place the button at the bottom of the page */
+    right: 2rem; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    background-color: var(--background);
+    border: 2px solid var(--black);
     color: var(--black);
-}
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 8px 16px;
+    border-radius: 4px;
+  }
+  
+  #myBtn:hover {
+    background: #e7e7e7;
+  }
 
-.menu-item__sub {
-    background-color: var(--white);
-    overflow: hidden;
-    transition: max-height 0.3s;
-    max-height: 0;
-}
-
-.menu-item__sub a {
-    display: block;
-    padding: 1.5rem 1.5rem;
-    color: var(--black);
-    font-size: 0.9rem;
-    position: relative;
-    text-decoration: none;
-}
-
-/* .menu-item__sub a::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 0.2rem;
-    height: 100%;
-    background: var(--black);
-    transform: translatex(-0.4rem);
-    transition: 0.3s;
-    opacity: 0;
-} */
+  footer {
+    border-top: solid 1px var(--black);
+  }
 
 
-.menu-item__sub a:hover::before {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.menu-item:target .menu-item__sub {
-    max-height: fit-content;
-}
+  /* Accordian section */
 
 
 
-/* .menu-list {
-    padding-left: 20px;
-    list-style: none;
-    font-size: .75rem;
-} */
-
-.sidebar .menu .menu-item:hover,
-.sidebar .menu .menu-item.is-active {
-    color: var(--black);
-    /* border-right: 5px solid #4BB166; */
-    background-color: rgb(244, 244, 244);
+.accordian-title {
+    padding-left: 1rem;
     font-weight: 700;
-    border-radius: .75rem;
+    
 }
-
-.content {
-    flex: 1 1 0;
-    padding-top: 4rem;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.content h1 {
-    color: #191609;
-    font-size: 6em;
-    margin-bottom: 1rem;
-}
-
-.heading {
-
-}
-
-.content p {
-    color: #191609;
-}
-
-.menu-toggle {
-    display: none;
-    position: fixed;
-    top: 2rem;
-    right: 2rem;
-    width: 60px;
-    height: 60px;
-    border-radius: 99px;
-    background-color: #191609;
-    cursor: pointer;
-}
-
-.hamburger {
-    position: relative;
-    top: calc(50% - 2px);
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 24px;
-    background-color: #ffffff;
-}
-
-.hamburger > span,
-.hamburger > span::before,
-.hamburger > span::after {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    border-radius: 99px;
-    background-color: #ffffff;
-    transition-duration: .25s ;
-}
-
-.hamburger > span::before {
-    content: '';
-    top: -8px;
-}
-.hamburger > span::after {
-    content: '';
-    top: 8px;
-}
-
-
-.menu-toggle.is-active .hamburger > span {
-    transform: rotate(45deg);
-}
-
-.menu-toggle.is-active .hamburger > span::before {
-    top: 0;
-    transform: rotate(0deg);
-}
-.menu-toggle.is-active .hamburger > span::after {
-    top:0;
-    transform: rotate(90deg);
-}
-
-/* Large Screens */
-@media (max-width: 1024px) {
-    .sidebar {
-        max-width: 200px;
-    }
-}
-
-/* Medium Screens */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-    .content {
-        padding: 8rem 2rem;
-
-    }
-    .sidebar {
-        position: fixed;
-        top: 0;
-        left: -300px;
-        height: 100vh;
-        width: 100%;
-        max-width: 300px;
-        transition: 0.2s linear;
-    }
-    .sidebar.is-active {
-        left: 0;
-    }
-}
-
-
-/*Homepage*/
-
-.hook {
-    /* background-color:white; */
-    /* border: 1px solid black; */
-    max-width: 960px;
-    padding-top: 80px;
-    margin: auto;
-}
-
-.more {
-    border-bottom: 1px solid black;
-    margin-top: 1rem;
-    padding-bottom: 1rem;
-} 
-
-.row {
-    /* float: left;
-    width: 50%;
-    padding: 20px 10px 20px 10px; */
-    display: grid;
-    gap: 3rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
-
-  .rows {
-    float: left;
-    width: 100%;
-    padding: 20px 0px;
-    display: grid;
-    gap: 3rem;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-
-/* Explorations Section*/
-.tab {
-    overflow: hidden;
-    /* border: 1px solid #ccc; */
-    background-color: white;
-    padding-bottom: 1rem;
-  }
-
-  .tab-heading {
-    font-size: 2rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-  
-  /* Style the buttons that are used to open the tab content */
-  .tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 12px 16px;
-    transition: 0.3s;
-    margin-right: 1em;
-    border-radius: 4px;
-  }
-  
-  /* Change background color of buttons on hover */
-  .tab button:hover {
-    background-color: #ffffff;
-    border: 1px solid #191609;
-  }
-  
-  /* Create an active/current tablink class */
-  .tab button.active {
-    background-color: #191609;
-    border: 1px solid #191609;
-    color: white;
-    border-radius: 4px;
-  }
-  
-  /* Style the tab content */
-  .tabcontent {
-    display: none;
-    /* padding: 6px 12px; */
-    /* border: 1px solid #ccc; */
-    border-top: none;
-  }
-  
-
-  .figma-embed { height:65vh; display:flex; }
-
-
-
-
-
-  /*styling the buttons*/
+   /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
+    background-color: #eee;
+    color: var(--black);
     cursor: pointer;
-    padding: 10px 0px;
+    padding: 18px;
     width: 100%;
     text-align: left;
     border: none;
     outline: none;
     transition: 0.4s;
-    background-color: white;
-}
-
-/* background color to the button when clicked */
-.active, .accordion:hover {
-    color: #191609
-}
-
-/*Style the accordion panel. Hidden by default */
-.row {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2 ease-out;
-}
-
-
-.grid {
-    /* max-width: 960px;
-    margin-inline: auto; */
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    padding-top: 1rem;
-    margin-bottom: 4rem;
-}
-
-
-.card {
-    /* add shadow around card */
-
-    transition: 0.3s;
-    border-radius: 4px;
-    border: .5px solid var(--black);
-    height: 300px;
-    background-color: white;
-    color: black;
-    flex: 0 0 31%;
-    padding: 18px 25px 0px 16px;
-    border-radius: 5px;
-    position: relative;
-}
-
-.card h5 {
-    font-weight: 600;
-}
-
-.card:hover {
-    /*on hover, deepen shadow*/
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    background-color: #191609;
-    color: #ffffff;
-    cursor: pointer;
-}
-
-
-img {
-    /*rounding top corners of card image*/
-    border-radius: 4px 4px 0 0;
-    display: block;
-    max-width: 100%; /*This makes the image adapt to the screen size)*/
-}
-
-.subsection {
-    border-bottom: 1px solid #191609;
-    padding-bottom: 3rem;
-}
-
-.subsection h3 {
-    font-size: 2rem;
-    font-weight: 600;
-    padding-top: 2rem;
-    color: #4BB166;
-    padding-bottom: 1rem;;
-}
-
-.content-lists {
-    /* list-style: circle; */
-    list-style: decimal;
-    line-height: 150%;
-    font-size: 2.5em;
-    padding-left: 1em;
-}
-
-.resource-list {
-    list-style: none;
-    line-height: 150%;
-    font-size: 1.25rem;
-    font-weight: 600;
-}
-
-.resource-category {
-    list-style: none;
-    line-height: 150%;
-    font-size: 1.25rem;
-    font-weight: 600;
-    padding-bottom: 1rem;
-}
-
-/* .resources {
-    background-color: #4BB166; */
-
-/* } */
-
-.resource-li {
-    font-weight: 400;
-    font-size: 1rem;
-    list-style: none;
-}
-
-.resource-li:hover {
-    /* list-style: circle; */
-    text-decoration: underline;
-    cursor: pointer; 
-    font-weight: 400;
-    font-size: 1rem;
-    list-style: none;
-}
-
-.resource-item {
-    padding-bottom: 1rem;
-}
-
-.resource-item:hover {
-    /* list-style: circle; */
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-
-
-.design-tag {
-    font-size: .8327em;  
-    font-weight: 600;   
-    color: #4BB166;
-    position: absolute;
-    bottom: 1rem;
-}
-
-.component-tag {
-    font-size: .8327em;  
-    font-weight: 600;   
-    color: #c4318e;
-    position: absolute;
-    bottom: 1rem;
-}
-
-.subsection p {
-    padding-bottom: 1rem;
-}
-
-.resource-column {
-    float: left;
-    width: 25%;
+    border-top: 1px solid var(--black);
   }
   
-  /* Clear floats after the columns */
-  .resource-row:after {
-    content: "";
-    display: table;
-    clear: both;
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
   }
 
-  /* Responsive layout - when the screen is less than 600px wide, make the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-    .resource-column {
-      width: 100%;
-    }
+  .accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: var(--black);
+    display: inline;
+    float: left;
+    margin-left: 5px;
+    padding-right: 1rem;
+  }
+
+  h3 {
+    display: inline;
+  }
+  
+  .active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
   }

@@ -1,77 +1,67 @@
+<!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <!--a viewport declaration which does not disable zooming-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Accessibly</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-</head>
+        <!--a non-blocking base 64-encoded font resource-->
+        <link rel="stylesheet" href="fonts.css" media="none" onload="if(media!='all')media='all'">
+        <noscript><link rel="stylesheet" href="fonts.css"></noscript>
 
-<body>
-    <header>
-        <nav>
-            <h4>
-                <a href="index.html">Accessibly</a>
-            </h4>
+        <!--a non-blocking stylesheet-->
+        <link rel="stylesheet" href="main.css" media="none" onload="if(media!='all')media='all'">
+        <noscript><link rel="stylesheet" href="main.css"></noscript>
         
-            <ul>
-                <li><a class="nav_link" href='explorations.html'>Explorations</a></li>
-                <li><a class="nav_link" href='#'>Resources</a></li>
-                <li><a class="nav_link" href='https://www.figma.com/design/YYUsMBv4B5DjkXgtICwpmv/lpritchard_ag-plan?node-id=0-1&node-type=canvas&t=5eTf3Vza8l9X346G-0' target="_blank" rel="noopener noreferrer">
-                    <i class='bx bx-link-external'></i>
-                    <span class="nav_link">Case Study</span></a></li>
-            </ul>
-        </nav>
-    </header>
-   
+        <!--Icon link -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <div class="main-content">
-        <h1></h1>
+        <title>Resources –  Accessibly</title>
+    </head>
 
-        <h2>Explore by Topic</h2>
+    <body>
+        <!--Skip link for keyboard users-->
+        <a href="#main">skip to main content</a>
 
-        <section class="grid">
-            <div class="resource-card">
-                <h4>Topic 1</h4>
-                <!-- <p>
-                    Corem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p> -->
-            </div>
-            <div class="resource-card">
-                <h4>Topic 2</h4>
-                <!-- <p>
-                    Corem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p> -->
-            </div>
-            <div class="resource-card">
-                <h4>Topic 3</h4>
-                <!-- <p>
-                    Corem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p> -->
-            </div>
-            <div class="resource-card">
-                <h4>Topic 4</h4>
-                <!-- <p>
-                    Corem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p> -->
-            </div>
-            <div class="resource-card">
-                <h4>Topic 5</h4>
-                <!-- <p>
-                    Corem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p> -->
-            </div>
-            <div class="resource-card">
-                <h4>Topic 6</h4>
-                <!-- <p>
-                    Corem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p> -->
-            </div>
-        </section>
+        <!--logo/page navigation goes here-->
 
-    </div>
+        <header class="header__content">    
+                <a href="index.html" class="logo"><!--#main will be better for screenreaders, but is keeping the name from showing up-->
+                    Accessibly
+                </a>
 
-</body>
+            <nav>
+                <ul class="nav__list">
+                    <li><a href="plan.html" class="nav__link">Plan</a></li>
+                    <li><a href="design.html" class="nav__link">Design</a></li>
+                    <li><a href="develop.html" class="nav__link">Develop</a></li>
+                    <li><a href="#" class="nav__link">Resources</a></li>
+                    <li><a href="about.html" class="nav__link">About</a></li>
+                </ul>
+            </nav>
+        </header>
 
+        <!--Unique content of page goes here-->
+        <main id="main">
+            <h1>Resources</h1>
+            <p>A collection of </p>
+        
+        <section class="subsection">
+            <h2>References</h2>
+            <p>A complete <a class="link" href="references.html">list of references</a> can be found here.</p>
+        </section>   
+
+
+            <footer>
+                <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
+                <p class="small">A project by Lauren Pritchard &copy;2024</p>
+            </footer>
+        </main>
+
+        <!--a non-blocking javascript resource-->
+        <script src="scripts.js">
+           
+
+        </script>
+    </body>
 </html>
