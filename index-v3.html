@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <!--a viewport declaration which does not disable zooming-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--a non-blocking base 64-encoded font resource-->
+        <link rel="stylesheet" href="fonts.css" media="none" onload="if(media!='all')media='all'">
+        <noscript><link rel="stylesheet" href="fonts.css"></noscript>
+
+        <!--a non-blocking stylesheet-->
+        <link rel="stylesheet" href="main-v3.css" media="none" onload="if(media!='all')media='all'">
+        <noscript><link rel="stylesheet" href="main-v3.css"></noscript>
+        
+        <!--Icon link -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>Accessiblity Essentials</title>
+    </head>
+
+    <body>
+        <!--Skip link for keyboard users-->
+        <a href="#main">skip to main content</a>
+
+        <!--logo/page navigation goes here-->
+
+        <header class="header__content">    
+                <a href="#" class="logo"><!--#main will be better for screenreaders, but is keeping the name from showing up-->
+                    Design Accessibly
+                </a>
+
+            <nav>
+                <ul class="nav__list">
+                    <li><a href="/resources.html" class="nav__link">Resources</a></li>
+                    <li><a href="/about.html" class="nav__link">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!--Unique content of page goes here-->
+        <main id="main">
+            <h1>Design Accessibly.</h1>
+            <p class="subtitle">A beginners guide to designing for the web.</p>
+                        <p><b>The Concept</b> dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum
+                            est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus,
+                            ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus.
+                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                            Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex.
+                            Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis
+                            convallis diam sit amet lacinia. Aliquam in elementum tellus.
+                        </p>
+                    </div>
+                    <section class="color-block">
+                        <div id="accordionGroup" class="accordion">
+                            <h3>
+                              <button type="button" aria-expanded="true" class="accordion-trigger" aria-controls="sect1" id="accordion1id">
+                                <span class="accordion-title">
+                                 Color Contrast
+                                  <span class="accordion-icon"></span>
+                                </span>
+                              </button>
+                            </h3>
+                            <div id="sect1" role="region" aria-labelledby="accordion1id" class="accordion-panel">
+                              <div>
+                                
+                              </div>
+                            </div>
+                            <h3>
+                              <button type="button" aria-expanded="false" class="accordion-trigger" aria-controls="sect2" id="accordion2id">
+                                <span class="accordion-title">
+                                  Contrast Minimum 
+                                  <span class="accordion-icon"></span>
+                                </span>
+                              </button>
+                            </h3>
+                            <div id="sect2" role="region" aria-labelledby="accordion2id" class="accordion-panel" hidden="">
+                              <div>
+                                <p>info here</p>
+                              </div>
+                            </div>
+                            <h3>
+                              <button type="button" aria-expanded="false" class="accordion-trigger" aria-controls="sect3" id="accordion3id">
+                                <span class="accordion-title">
+                                  Non-text Contrast
+                                  <span class="accordion-icon"></span>
+                                </span>
+                              </button>
+                            </h3>
+                            <div id="sect3" role="region" aria-labelledby="accordion3id" class="accordion-panel" hidden="">
+                              <div>
+                                <p>INFO HERE</p>
+                              </div>
+                            </div>
+                          </div>
+                                  
+                        </section>
+         
+      
+            <footer>
+                <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
+                <p class="small">A project by Lauren Pritchard &copy;2024</p>
+            </footer>
+
+
+        </main>
+
+        <!--a non-blocking javascript resource-->
+        <script src="script-v3.js">
+           
+
+        </script>
+    </body>
+</html>
+
+
+<div class="single-accordian">
+    <h2 class="accordian-title">
+        Color
+    </h2>
+    
+    <button class="accordion"><h3>Use of Color</h3></button>
+    <div class="panel">
+        <div class="guidelines">
+            
+            <blockquote>Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.</blo>
+            <p class="level"><B>WCAG Level AA</B></p>
+            <a class="WCAG-Link" href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html">Understanding SC 1.4.3:
+                Contrast (Minimum)</a>
+        </div>
+        <div class="benefits">
+            <h4>Why is color important?</h4>
+        </div>
+
+        <div class="best-practices">
+            <h4>Best Practices</h4>
+            <ul>
+                <li class="best-list">You can make your website’s components stand out to all users by properly using color contrast in your design. The trick is to use brightness and tone, in addition to hues. If you contrast by color, but maintain the same brightness, elements (might) look blended or muddled to those with color deficiencies.</li>
+                <li class="best-list">The issue with color contrast can be complicated as some people with cognitive disabilities are sensitive to light and could experience eye fatigue or feel distracted when looking at high contrast text and images, such as black text on a white background at a 21:1 contrast ratio. A good middle ground is to aim for a 7:1 contrast ratio, the AAA rating for WCAG.<a href="https://fonts.google.com/knowledge/readability_and_accessibility/introducing_accessibility_in_typography/">Source</a></li>
+            </ul>
+        </div>
+        <div class="test">
+            <h4>Test it.</h4>
+            <p>Use a non-destructive <a href="https://www.figma.com/community/plugin/1105916617805028875/grayscale">FIGMA plugin</a> to convert your designs to grayscale to help you identify if any design elements become indistiguishable or difficult to read.</p>
+            <image  src="/img/COLOR.png" class="about-image" alt="Frankie being cute"></image>
+        </div>
+        <div class="resources">
+            <h4>Resources</h4>
+            <ol>
+                <li class="resource-list">WCAG</li>
+                <li class="resource-list">Inclusive Component Patterns</li>
+            </ol>
+        </div>
+    </div>
+    
+    <button class="accordion"><h3>Contrast Minimum</h3></button>
+    <div class="panel">
+        <div class="guidelines">
+            <h4>WCAG says:</h4>
+            <p class="Meta">Level AA</p>
+            <p>The visual presentation of text and images of text has a contrast ratio of at least 4.5:1, except for the following: 
+                Large Text: Large-scale text and images of large-scale text have a contrast ratio of at least 3:1;
+                Incidental: Text or images of text that are part of an inactive user interface component, that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant other visual content, have no contrast requirement.
+                Logotypes: Text that is part of a logo or brand name has no minimum contrast requirement.</p>
+            <a class="WCAG-Link" href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html">WCAG 1.4.3</a>
+        </div>
+        <div class="best-practices">
+            <h4>Best Practices</h4>
+            <ul>
+                <li class="best-list"><b>Don’t convey meaning through color alone. </b>Incorporate alternate means of communication—use labels, texture, shapes, and patterns—to prevent confusion among people with color blindness. Any use of an alternate signal to convey meaning is acceptable. <a href="https://www.levelaccess.com/blog/color-blindness-accessibility-what-designers-need-to-know/">Source</a></li></li>
+                <li class="best-list"><b>Avoid using the same color to mean different things.</b> Use color consistently throughout your interface, especially when you use it to help communicate information like status or interactivity. For example, an app might use blue to indicate that people can tap text to view more. Even when the app communicates interactivity using a visual indicator that doesn’t rely on color — such as a chevron or arrow icon — using a color other than blue for the interactive text is confusing.<a href="https://developer.apple.com/design/human-interface-guidelines/color#Best-practices">Source</a></li>
+                <li class="best-list"><b>Avoid certain color combinations.</b> Red/green color blindness is the most common, so avoid green on red or red on green. (Think especially about avoiding using red and green for “bad” and “good” indicators). <a href="http://web-accessibility.carnegiemuseums.org/design/color/">Source</a></li>
+                <li class="best-list"><b>Use texture and patterns.</b> When you need to emphasize certain objects, it’s a good idea to incorporate textures and/or patterns. This is especially helpful for charts and graphs where color is often used to differentiate between items. Adding textures and patterns like checkers, lines, and dots can help make each item stand out as unique and easily identifiable. <a href="https://www.audioeye.com/post/8-ways-to-design-a-color-blind-friendly-website/">Source</a></li>
+
+            </ul>
+        </div>
+        <div class="test">
+            <h4>Convert it to grayscale.</h4>
+            <p>Use a non-destructive <a href="https://www.figma.com/community/plugin/1105916617805028875/grayscale">FIGMA plugin</a> to convert your designs to grayscale will help you identify if any design elements become indistiguishable or difficult to read.</p>
+        </div>
+        <div class="example">
+            <h4>Example</h4>
+            <p>lorem ipsum</p>
+            <image  src="/img/COLOR.png" class="about-image" alt="Frankie being cute"></image>
+        </div>
+        <div class="resources">
+            <h4>Resources</h4>
+            <ol>
+                <li class="resource-list">WCAG</li>
+                <li class="resource-list">Inclusive Component Patterns</li>
+                <li class="resource-list">5 Visual Treatments that Improve Accessibility</li>
+                <li class="resource-list">Color Blindness Accessibility: What Designers Need to Know</li>
+            </ol>
+        </div>
+    </div>
+    
+    <button class="accordion"><h3>Non-Text Contrast</h3></button>
+    <div class="panel">
+        <div class="guidelines">
+            <h4>WCAG says:</h4>
+            <p class="Meta">Level AA</p>
+            <p>The visual presentation of the following have a contrast ratio of at least 3:1 against adjacent color(s):
+
+                <dl>
+                    <dt>User Interface Components</dt>
+                    <dd>Visual information required to identify user interface components and states, except for inactive components or where the appearance of the component is determined by the user agent and not modified by the author;</dd>
+                    <dt>Graphical Objects</dt>
+                    <dd>Parts of graphics required to understand the content, except when a particular presentation of graphics is essential to the information being conveyed.</dd>
+                </dl>  
+            <a class="WCAG-Link" href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html">WCAG 1.4.11</a>
+        </div>
+        <div class="best-practices">
+            <h4>Best Practices</h4>
+            <ul>
+            
+                <li class="best-list"><b>Color blindness:</b> Red/green color blindness is the most common, so avoid green on red or red on green. (Think especially about avoiding using red and green for “bad” and “good” indicators). <a href="http://web-accessibility.carnegiemuseums.org/design/color/">Source</a></li>
+
+            </ul>
+        </div>
+        <!-- <div class="test">
+            <h4>Test It</h4>
+            <p>Use a non-destructive <a href="https://www.figma.com/community/plugin/1105916617805028875/grayscale">FIGMA plugin</a> to convert your designs to grayscale will help you identify if any design elements become indistiguishable or difficult to read.</p>
+        </div> -->
+        <div class="example">
+            <h4>Example</h4>
+            <p>lorem ipsum</p>
+            <image  src="/img/COLOR.png" class="about-image" alt="Frankie being cute"></image>
+        </div>
+        <div class="resources">
+            <h4>Resources</h4>
+            <ol>
+                <li class="resource-list">Eight Shapes Contrast Checker</li>
+                <li class="resource-list">Colorable</li>
+                <li class="resource-list">TPGi's Color Contrast Analyzer </li>
+                <li class="resource-list">Adobe Color Contrast Checker</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<div class="single-accordian">
+    <div class="accordian-title">
+        <h2>Typography</h2>
+    </div>
+    
+    <button class="accordion"><h3>Typefaces</h3></button>
+    <div class="panel">
+        <div class="guidelines">
+            <h4>What WCAG says about font selection</h4>
+            <!-- <p class="Meta">Level AA</p> -->
+            <p>WCAG has no guidelines for font selection.</p>
+            <!-- <a class="WCAG-Link" href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html">WCAG 1.4.3</a> -->
+        </div>
+        <div class="best-practices">
+            <h4>Best Practices</h4>
+            <ul>
+                <li class="best-list"><b>Select clear and readable typefaces.</b> A distinct and straightforward typeface greatly enhances readability. Avoid character ambiguity, where two characters appear remarkably alike, to avoid confusion (like the capital “I” and lowercase “L” ). The more straightforward the typeface, the easier it will be for your users to read.<a href="https://www.a11y-collective.com/blog/wcag-minimum-font-size/#:~:text=The%20WCAG%20recommendation%20is%204.5,at%20least%2024px%20or%20larger"> Source</a></li>
+                <li class="best-list"><b>Limit font styles and varieties</b>Numerous typefaces or font styles can disorient users. Maintain a small, consistent set of fonts to aid readability and reduce cognitive load, offering a more consistent user interface.<a href="https://www.a11y-collective.com/blog/wcag-minimum-font-size/#:~:text=The%20WCAG%20recommendation%20is%204.5,at%20least%2024px%20or%20larger."> Source</a></li>
+                <li class="best-list"><b>Maintain clarity in letter and word spacing:</b>Avoid crowding letters and tightly packed text, which can be tough, especially for users with reading difficulties. Maintain appropriate spacing using CSS properties like ‘letter-spacing’ and ‘word-spacing’ to ensure clarity.<a href="https://www.a11y-collective.com/blog/wcag-minimum-font-size/#:~:text=The%20WCAG%20recommendation%20is%204.5,at%20least%2024px%20or%20larger."> Source</a></li>
+                <li class="best-list"><b>Avoid using all caps.</b>Detail needed.<a href="#"> Source</a></li>
+            </ul>
+        </div>
+        <div class="test">
+            <h4>Counters</h4>
+            <p>Counters, the white space within letters such as “o,” “e,” and “c,” can play a role in legibility. When the counters are open, there is more white space inside the letter and the letters may appear larger. Open counters can make it easier for the reader to differentiate similarly shaped letters, such as the “c” and “e”. <a href="https://fonts.google.com/knowledge/readability_and_accessibility/introducing_accessibility_in_typography"> Source</a> </p>
+        </div>
+        <div class="example">
+            <h4>Example</h4>
+            <p>(image of two different typefaces Aa Aa)</p>
+            <!-- <image  src="/img/COLOR.png" class="about-image" alt="Frankie being cute"></image> -->
+        </div>
+        <div class="resources">
+            <h4>Resources</h4>
+            <ol>
+                <li class="resource-list">Introducing accessibility in typography</li>
+                <li class="resource-list">How to Pick the Perfect Font Size: A Guide to WCAG Accessibility</li>
+                <li class="resource-list">Fontsmith publishes a guide to choosing more accessible typefaces</li>
+            </ol>
+        </div>
+    </div>
+    
+    
+    <button class="accordion"><h3>Text size</h3></button>
+    <div class="panel">
+        <div class="guidelines">
+            <h4>WCAG says:</h4>
+            <p class="Meta">Level AA</p>
+            <p>Except for captions and images of text, text can be resized without assistive technology up to 200 percent without loss of content or functionality.
+
+            <i>WCAG does not explicitly recommend specific font sizes. </i></p>
+            <a class="WCAG-Link" href="https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html">WCAG 1.4.4</a>
+        </div>
+        <div class="best-practices">
+            <h4>Best Practices</h4>
+            <ul>
+                <li class="best-list"><b>Make sure your text isn’t too small.</b>The exact dimensions of font sizes can vary depending on the unit used, the size of the viewport (if units are relative), and the pixel density of the device’s screen, but a safe bet would be to use 16px or 1em or 1rem as the smallest size for body type.
+                <a href="https://fonts.google.com/knowledge/readability_and_accessibility/introducing_accessibility_in_typography">Source</a></li>
+                <li class="best-list"><b>Sans Serif</b> Need context
+                    <a href="#">Source</a></li>
+            </ul>
+        </div>
+        <!-- <div class="test">
+            <h4>Convert it to grayscale.</h4>
+            <p>-</p>
+        </div> -->
+        <div class="example">
+            <h4>Example</h4>
+            <p>lorem ipsum</p>
+            <!-- <image  src="/img/COLOR.png" class="about-image" alt="Frankie being cute"></image> -->
+        </div>
+        <div class="resources">
+            <h4>Resources</h4>
+            <ol>
+                <li class="resource-list">Introducing accessibility in typography</li>
+                <li class="resource-list">Understanding Accessible Fonts and Typography for Section 508 Compliance</li>
+            </ol>
+        </div>
+    </div>
+    
+   
+    <button class="accordion"><h3>Spacing (Line, Paragraph, & Column)</h3></button>
+    <div class="panel">
+        <div class="guidelines">
+            <h4>WCAG says:</h4>
+            <p class="Meta">Level AA</p>
+            <p>In content implemented using markup languages that support the following text style properties, no loss of content or functionality occurs by setting all of the following and by changing no other style property:
+            <ul>
+                <li>Line height (line spacing) to at least 1.5 times the font size;</li>
+                <li>Spacing following paragraphs to at least 2 times the font size;</li>
+                <li>Letter spacing (tracking) to at least 0.12 times the font size;</li>
+                <li>Word spacing to at least 0.16 times the font size.</li>
+            </ul>    
+            <a class="WCAG-Link" href="hhttps://www.w3.org/TR/WCAG21/#text-spacing">WCAG 1.4.12</a>
+        </div>
+        <div class="best-practices">
+            <h4>Best Practices</h4>
+            <ul>
+                <li class="best-list"><b>Line Spacing.</b>Too little leading will overly emphasize word-spacing and in effect reduce readability. Too much leading will give readers difficulty in tracking from one line of text to the next, and may also increase strain on the neck. Aim for a comfortable balance, and if in doubt, err on the side of slightly more leading. (Accessibility 2, 29)</li>
+            </ul>
+        </div>
+        <!-- <div class="test">
+            <h4>Convert it to grayscale.</h4>
+            <p>-</p>
+        </div> -->
+        <div class="example">
+            <h4>Example</h4>
+            <p>lorem ipsum</p>
+            <!-- <image  src="/img/COLOR.png" class="about-image" alt="Frankie being cute"></image> -->
+        </div>
+        <div class="resources">
+            <h4>Resources</h4>
+            <ol>
+                <li class="resource-list"><a href="https://fonts.google.com/knowledge/readability_and_accessibility/introducing_accessibility_in_typography"> Introducing accessibility in typography</a></li>
+            </ol>
+        </div>
+    </div>
+
+    <button class="accordion"><h3>Visual Presentation</h3></button>
+    <div class="panel">
+        <div class="guidelines">
+            <h4>WCAG says:</h4>
+            <p class="Meta">Level AAA</p>
+            <p>Visual Presentation: For the visual presentation of blocks of text, a mechanism is available to achieve the following:
+                <ul>
+                    <li>Width is no more than 80 characters or glyphs (40 if CJK).</li>
+                    <li> Text is not justified (aligned to both the left and the right margins).</li>
+                    <li> Text can be resized without assistive technology up to 200 percent in a way that does not require the user to scroll horizontally to read a line of text on a full-screen window.</li>
+                </ul>
+
+            <a class="WCAG-Link" href="https://www.w3.org/TR/WCAG21/#visual-presentation">WCAG 1.4.8</a>
+        </div>
+        <div class="best-practices">
+            <h4>Best Practices</h4>
+            <ul>
+                <li class="best-list"><b>Avoid shorter line lengths.</b>Shorter line lengths increase the cognitive load on the reader by forcing them to jump to a new line of text more often. If a line length is too short, the reader will also be faced with the distractions posed by either the uneven rag, or gaps made by justification.(Accessibility 2, 30)</li>
+                <li class="best-list"><b>Avoid longer line lengths.</b>Longer line lengths make it more difficult to find the starting point for each new line of text. If a line length is too long, it will also cause difficulties for those with neck mobility issues. Ideally, only the eyes should need to move in order to read a passage of text. (Accessibility 2, 30)</li>
+                <li class="best-list"><b>Only utilize columns when necessary.</b>Line lengths beyond 100 characters should almost certainly be split into two columns. However, it should be noted that multi-column layouts can impede accessibility. Only utilize columns when necessary, and only implement the minimum amount to avoid readability issues. (Accessibility 2, 30)</li>
+                <li class="best-list"><b>Avoid using justified text.</b>Flush Left is usually the best choice when typesetting in a left-to-right written language. The flush left edge creates a common starting point that the eye can quickly find to start each new line of text. This is particularly helpful for readers with restricted visual fields. Most people are so accustomed to reading this way, that they hardly notice the ragged right edge of the text if the line length is appropriately set. (Accessibility 2, 30)</li>
+            </ul>
+        </div>
+        <div class="test">
+            <h4>Testing resize</h4>
+            <p></p>
+        </div>
+        <div class="example">
+            <h4>Example</h4>
+            <p>lorem ipsum</p>
+            <!-- <image  src="/img/COLOR.png" class="about-image" alt="Frankie being cute"></image> -->
+        </div>
+        <div class="resources">
+            <h4>Resources</h4>
+            <ol>
+                <li class="resource-list">WCAG</li>
+            </ol>
+        </div>
+    </div>
+
+    <button class="accordion"><h3>Formatting and Punctuation</h3></button>
+    <div class="panel">
+        <div class="guidelines">
+            <h4>WCAG</h4>
+            <p class="Meta">Supplemental Guidance</p>
+            <ul>
+                <li>
+                    Use punctuation correctly for the language you are writing in, as it will affect how the stress and intonation (known as prosody) patterns from the text are heard, when converted into speech. 
+                </li>
+                <li>
+                    Avoid the use of Roman Numerals and unfamiliar symbols in text where possible. These can confuse readers and are likely to be read incorrectly by text-to-speech tools.
+                </li>
+            </ul>
+            <a class="WCAG-Link" href="https://www.w3.org/WAI/WCAG2/supplemental/patterns/o3p06-format-punctuation/">Use Clear, Unambiguous Formatting and Punctuation</a>
+        </div>
+        <div class="best-practices">
+            <h4>Best Practices</h4>
+            <ul>
+                <li class="best-list"><b>Letter Case. </b>People generally find text set in ALL CAPITAL LETTERS to be more difficult to read than text set in mixed-case, or Title Case. Typesetting in ALL CAPS should only be used sparingly for purposeful differentiation or emphasis. Avoid using it for any text longer than a few words. (Accessibility 2, 32)</li>
+                <li class="best-list"><b>Formatting. </b>Typographic formatting such as bold, italic, and especially underline should be used sparingly, as they create visual distraction. Only use this type of formatting when it genuinely enhances communication for all readers. Avoid using italics and underline for emphasis, as they tend to reduce legibility and readability. (Accessibility 2, 32)</li>
+                <li class="best-list"><b>Hyphenating. </b>Avoid hyphenating lines of text, as remembering partial words can add to a reader’s cognitive load. If you absolutely must hyphenate, make sure it is done so that the meaning of the entire word is strongly implied by the first part of the word shown before the hyphen. Never manually insert a hyphen in order to hyphenate a line of text. Some screen readers will read the hyphen as an intrusive part of the text. For example, “he is bald-ing” may be read as “he is bald dash ing.” Only use soft-hyphens or discretionary hyphens, if you must hyphenate lines at all. (Accessibility 2, 32)</li>
+            </ul>
+        </div>
+        <!-- <div class="test">
+            <h4>Convert it to grayscale.</h4>
+            <p>-</p>
+        </div> -->
+        <div class="example">
+            <h4>Example</h4>
+            <p>lorem ipsum</p>
+            <!-- <image  src="/img/COLOR.png" class="about-image" alt="Frankie being cute"></image> -->
+        </div>
+        <div class="resources">
+            <h4>Resources</h4>
+            <ol>
+                <li class="resource-list">WCAG</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="single-accordian">
+    <div class="accordian-title">
+        <h2>Layout/Hierarchy</h2>
+    </div>
+    
+    <button class="accordion"><h3>Meaningful Sequence</h3></button>
+    <div class="panel">
+        <div class="guidelines">
+            <h4>WCAG says:</h4>
+            <p class="Meta">Level A</p>
+            <p>When the sequence in which content is presented affects its meaning, a correct reading sequence can be programmatically determined.</p>
+            <a class="WCAG-Link" href="https://www.w3.org/WAI/WCAG21/Understanding/meaningful-sequence.html">WCAG 1.3.2</a>
+        </div>
+        <div class="best-practices">
+            <h4>Best Practices</h4>
+            <ul>
+                <li class="best-list">The backbone of accessible digital media is a robust semantic structure. This means that the following should be able to be programmatically determined by the computing device. 
+                    <ul>
+                        <li>The purpose of each page element</li>
+                        <li>The reading order of the content.</li>
+                        <li>The hierarchical structure of the content.</li>
+                        <li>The content itself. (Accessibility 2, 36)</li>
+                    </ul></li>
+                    <li class="best-list">When designing web pages, select standard components that look and behave the way users expect. Use standard conventions for layout such as:
+                    <ul>
+                        <li>Home link in the upper left corner,</li>
+                        <li>navigation at the top, and</li>
+                        <li>search in the upper right. (Supplemental Guidance to WCAG 2)</li>
+                    </ul></li>
+                    <li class="best-list">Use short copy and bulleted lists rather than big blocks of text. This is easier for all readers to scan and it improves accessibility for users who depend on screen readers (https://brand.ucla.edu/fundamentals/accessibility/color-type)</li>
+                
+            </ul>
+        </div>
+        <div class="test">
+            <h4>Validate code by https://validator.w3.org
+                axe for designers figma plugin</h4>
+            <p>-</p>
+        </div>
+        <div class="example">
+            <h4>Example</h4>
+            <p>lorem ipsum</p>
+            <!-- <image  src="/img/COLOR.png" class="about-image" alt="Frankie being cute"></image> -->
+        </div>
+        <div class="resources">
+            <h4>Resources</h4>
+            <ol>
+                <li class="resource-list">WCAG</li>
+            </ol>
+        </div>
+    </div>
+
+    <button class="accordion"><h3>Orientation</h3></button>
+    <div class="panel">
+        <div class="guidelines">
+            <h4>WCAG says:</h4>
+            <p class="Meta">Level AA</p>
+            <p>Content does not restrict its view and operation to a single display orientation, such as portrait or landscape, unless a specific display orientation is essential.</p>
+            <a class="WCAG-Link" href="https://www.w3.org/WAI/WCAG21/Understanding/meaningful-sequence.html">WCAG 1.3.2</a>
+        </div>
+        <div class="best-practices">
+            <h4>Best Practices</h4>
+            <ul>
+                <li class="best-list">The visual presentation shouldn’t require any specific screen size, orientation, device, browser, or any other limitations on the part of the user. Instead, the design and content should gracefully reflow and wrap from one viewport to another, regardless of the size or zoom level. This is sometimes referred to as responsive or liquid design, and this flexibility is at the core of an accessible visual presentation.<a href="https://craft-cms-s3.s3.amazonaws.com/assets/images/resources/RGD_AccessAbility2_Handbook_2021_09_28.pdf">Source</a></li>
+            </ul>
+        </div>
+        <!-- <div class="test">
+            <h4>Convert it to grayscale.</h4>
+            <p>-</p>
+        </div> -->
+        <div class="example">
+            <h4>Example</h4>
+            <p>lorem ipsum</p>
+            <!-- <image  src="/img/COLOR.png" class="about-image" alt="Frankie being cute"></image> -->
+        </div>
+        <div class="resources">
+            <h4>Resources</h4>
+            <ol>
+                <li class="resource-list">WCAG</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<div class="single-accordian">
+    <div class="accordian-title">
+        <h2>Copy</h2>
+    </div>
+    
+    <button class="accordion"><h3>Headings and Labels</h3></button>
+    <div class="panel">
+        <div class="guidelines">
+            <h4>WCAG says:</h4>
+            <p class="Meta">Level AA</p>
+            <p>LOREM</p>
+            <a class="WCAG-Link" href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html">WCAG 1.4.3</a>
+        </div>
+        <div class="best-practices">
+            <h4>Best Practices</h4>
+            <ul>
+                <li class="best-list">Before assigning headings, review the overall structure of the webpage or document. Divide the page into main sections and begin each section with a descriptive heading. Then add subheadings where appropriate. A section may consist of one, two or more paragraphs; however, make sure you don’t add too many subheadings because this may make your content harder to read. <a href="https://accessibility.pearson.com/guidelines/accessibility-guidance-for-assessment/operable/section-headings/#contentStart">Source</a></li>
+                <li class="best-list">Authors may also want to consider putting the most important information at the beginning of each heading. This helps users “skim" the headings to locate the specific content they need, and is especially helpful when browsers or assistive technology allow navigation from heading to heading.<a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G130">Source</a></li>
+                <li class="best-list">Providing clear and unambiguous labels and instructions (including examples of expected data formats) helps all users - but particularly those with cognitive, language, and learning disabilities - to enter information correctly. <a href="https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions">Source</a></li>
+                <li class="best-list">Providing clear and unambiguous labels and instructions (including clear identification of required fields) can prevent users from making incomplete or incorrect form submissions, which prevents users from having to navigate once more through a page/form in order to fix submission errors.<a href="https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions">Source</a></li>
+            </ul>
+        </div>
+        <!-- <div class="test">
+            <h4>Convert it to grayscale.</h4>
+            <p>-</p>
+        </div> -->
+        <div class="example">
+            <h4>Example</h4>
+            <p>lorem ipsum</p>
+            <!-- <image  src="/img/COLOR.png" class="about-image" alt="Frankie being cute"></image> -->
+        </div>
+        <div class="resources">
+            <h4>Resources</h4>
+            <ol>
+                <li class="resource-list">Pearson</li>
+            </ol>
+        </div>
+    </div>
+    
+    <button class="accordion"><h3>Non-text Content</h3></button>
+    <div class="panel">
+        <div class="guidelines">
+            <h4>WCAG says:</h4>
+            <p class="Meta">Level A</p>
+            <p>All non-text content that is presented to the user has a text alternative that serves the equivalent purpose, except for the situations listed below.</p>
+            <a class="WCAG-Link" href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html">WCAG 1.1.1</a>
+        </div>
+        <div class="best-practices">
+            <h4>Best Practices</h4>
+            <ul>
+                <li class="best-list"><b>-</b><a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html">Source</a></li>
+            </ul>
+        </div>
+        <!-- <div class="test">
+            <h4>Convert it to grayscale.</h4>
+            <p>-</p>
+        </div> -->
+        <div class="example">
+            <h4>Example</h4>
+            <p>lorem ipsum</p>
+            <!-- <image  src="/img/COLOR.png" class="about-image" alt="Frankie being cute"></image> -->
+        </div>
+        <div class="resources">
+            <h4>Resources</h4>
+            <ol>
+                <li class="resource-list">WCAG</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<div class="single-accordian">
+    <div class="accordian-title">
+        <h2>Interactivity</h2>
+    </div>
+    
+    <button class="accordion"><h3>Use of Color</h3></button>
+    <div class="panel">
+      <p>Lorem ipsum...</p>
+    </div>
+    
+</div>
+
+
+<div class="single-accordian">
+    <div class="accordian-title">
+        <h2>Media</h2>
+    </div>
+    
+    <button class="accordion"><h3>Use of Color</h3></button>
+    <div class="panel">
+      <p>Lorem ipsum...</p>
+    </div>
+    
+</div>
+
+</section>
+
+<h2>Make it better.</h2>
+<p> If you see something off, please let me know!
+</p>
+<a class="btn default" href="about.html">Learn more about this project</a>
+</section>

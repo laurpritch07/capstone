@@ -1,0 +1,30 @@
+<button class="accordion"><h3>Contrast Minimum</h3></button>
+                    <div class="panel">
+                        <div class="guidelines">
+                            <h4>WCAG says:</h4>
+                            <p class="Meta">Level AA</p>
+                            <p>LOREM</p>
+                            <a class="WCAG-Link" href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html">WCAG 1.4.3</a>
+                        </div>
+                        <div class="best-practices">
+                            <h4>Best Practices</h4>
+                            <ul>
+                                <li class="best-list"><b>-</b><a href="https://www.levelaccess.com/blog/color-blindness-accessibility-what-designers-need-to-know/">Source</a></li>
+                            </ul>
+                        </div>
+                        <!-- <div class="test">
+                            <h4>Convert it to grayscale.</h4>
+                            <p>-</p>
+                        </div> -->
+                        <div class="example">
+                            <h4>Example</h4>
+                            <p>lorem ipsum</p>
+                            <!-- <image  src="/img/COLOR.png" class="about-image" alt="Frankie being cute"></image> -->
+                        </div>
+                        <div class="resources">
+                            <h4>Resources</h4>
+                            <ol>
+                                <li class="resource-list">WCAG</li>
+                            </ol>
+                        </div>
+                    </div>

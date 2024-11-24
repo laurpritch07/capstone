@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <!--a viewport declaration which does not disable zooming-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--a non-blocking base 64-encoded font resource-->
+    <link rel="stylesheet" href="fonts.css" media="none" onload="if(media!='all')media='all'">
+    <noscript>
+        <link rel="stylesheet" href="fonts.css">
+    </noscript>
+
+    <!--a non-blocking stylesheet-->
+    <link rel="stylesheet" href="main-v2.css" media="none" onload="if(media!='all')media='all'">
+    <noscript>
+        <link rel="stylesheet" href="main-v2.css">
+    </noscript>
+
+    <!--Icon link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Make it accessible.</title>
+</head>
+
+<body>
+    <!--Skip link for keyboard users-->
+    <a href="#main">skip to main content</a>
+
+    <!--logo/page navigation goes here-->
+<!-- 
+    <header class="header__content">
+        <h1 class="logo"><a href="#" class="logo">
+           Make it accessible.
+        </h1>
+
+        <nav>
+            <ul class="nav__list">
+                <li><a href="/resources.html" class="nav__link">Resources</a></li>
+                <li><a href="/about.html" class="nav__link">About</a></li>
+            </ul>
+        </nav>
+    </header> -->
+
+    <header class="header__content">
+        <a href="index-v2.html"
+            class="logo">
+           Make it <u>accessible</u>.
+        </a>
+
+        <nav>
+            <ul class="nav__list">
+                <li><a href="/resources.html" class="nav__link">Resources</a></li>
+                <li><a href="about.html" class="nav__link">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+
+    <!--Unique content of page goes here-->
+    <main id="main">
+
+
+
+
+
+        <!-- <h1>Make it accessible.</h1> -->
+        <h1>A beginners guide to designing accessibly.</h1>
+        </div>
+            <section class="color-block">
+                <div id="accordionSection" class="accordion-section">
+                    <div class="accordion-header">
+                        <h2 class="accordian-name"> Color and Contrast</h2>
+                        <image  src="/img/ColorAndContrast.png" class="principle-icon" alt="Blue square centered over a gold square"></image>
+                    </div>
+                    <div id="accordionGroup" class="accordion">
+                        <h3>
+                            <button type="button" aria-expanded="false" class="accordion-trigger" aria-controls="sect1"
+                                id="accordion1id">
+                                <span class="accordion-title">
+                                    Use of Color
+                                    <span class="accordion-icon"></span>
+                                </span>
+                            </button>
+                        </h3>
+                        <div id="sect1" role="region" aria-labelledby="accordion1id" class="accordion-panel" hidden="">
+                            <div>
+                                <div class="accordion-subsection">
+            
+                                    <h4 class="accordion-subtitle">Guidelines</h4>
+                                    <p class="accordion-p">Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element. (Level A) 
+                                        <a class="WCAG-Link" href="https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html">WCAG 2.1 Understanding Use of Color</a>
+                            
+                                    </p>
+                                </div>
+
+                                <div class="accordion-subsection">
+            
+                                    <h4 class="accordion-subtitle">What this means...</h4>
+                                    <p class="accordion-p">Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element. (Level A) 
+                                        <a class="WCAG-Link" href="https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html">WCAG 2.1 Understanding Use of Color</a>
+                            
+                                    </p>
+                                </div>
+                                
+                                <div class="accordion-subsection">
+                                    <h4 class="accordion-subtitle">Why it matters?</h4>
+                                    <p class="accordion-p">Some users have difficulty perceiving color. 
+                                    </p>
+                                </div>
+
+                                <div class="accordion-subsection">
+            
+                                    <h4 class="accordion-subtitle">Keep in Mind</h4>
+                        
+                                    <ul class="accordion-list">
+                                        <li><b>Don’t convey meaning through color alone.</b> Incorporate alternate means of communication—use labels, texture, shapes, and patterns—to prevent confusion among people with color blindness. <a class="" href="https://www.levelaccess.com/blog/color-blindness-accessibility-what-designers-need-to-know/"> Source</a></li>
+                                        <li><b>Avoid using the same color to mean different things.</b> Use color consistently throughout your interface, especially when you use it to help communicate information like status or interactivity. <a class="" href="https://developer.apple.com/design/human-interface-guidelines/color#Best-practices"> Source</a></li>
+                                        <li><b>Avoid certain color combinations.</b> There are certain color combinations that especially bad for users who are color blind. Red/green color blindness is the most common, so avoid green on red or red on green. (Think especially about avoiding using red and green for “bad” and “good” indicators).<a class="" href="http://web-accessibility.carnegiemuseums.org/design/color/"> Source</a></li>
+                                        <li><b>Use texture and patterns.</b> When you need to emphasize certain objects, it’s a good idea to incorporate textures and/or patterns. This is especially helpful for charts and graphs where color is often used to differentiate between items. Adding textures and patterns like checkers, lines, and dots can help make each item stand out as unique and easily identifiable. <a class="" href="https://www.audioeye.com/post/8-ways-to-design-a-color-blind-friendly-website/"> Source</a></li>
+                                    </ul>
+                                </div>
+
+                                
+                                <div class="accordion-subsection">
+            
+                                    <h4 class="accordion-subtitle">Example</h4>
+                        
+                                    <p class="accordion-p">"A form contains both required and optional fields. Instructions at the top of the form explain that required fields are labeled with red text and also with an icon. Users who cannot perceive the difference between the optional field labels and the red labels for the required fields will still be able to see the icon next to the red labels."
+                                        
+                                        <image  src="/img/Use-of-Color.png" class="about-image" alt="Frankie being cute"></image>
+                                    </p>
+                                </div>
+
+                                <div class="accordion-subsection">
+                                    <h4 class="accordion-subtitle">Test it (OR GET STARTED?)</h4>
+                                    <p class="accordion-p"> Some users have difficulty perceiving color, testing your color combinations by using a tool like <a class="Link" href="https://www.whocanuse.com/?bg=33997c&fg=ffffff&fs=16&fw=">Whocanuse.com</a> will help you understand how color contrast can affect people with different visual impairments.
+                                    </p>
+                                </div>
+
+                                <div class="accordion-subsection">
+                                    <h4 class="accordion-subtitle">Additional Resources</h4>
+                                    <ol class="accordion-list">
+                                        <li>
+                                                List Item
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- /*color contrast*/ -->
+                        <h3>
+                            <button type="button" aria-expanded="false" class="accordion-trigger" aria-controls="sect2"
+                                id="accordion2id">
+                                <span class="accordion-title">
+                                    Contrast Minimum
+                                    <span class="accordion-icon"></span>
+                                </span>
+                            </button>
+                        </h3>
+                        <div id="sect2" role="region" aria-labelledby="accordion2id" class="accordion-panel" hidden="">
+                            <div>
+                                <div class="accordion-subsection">
+            
+                                    <h4 class="accordion-subtitle">Guidelines</h4>
+                                    <p class="accordion-p">The visual presentation of text and images of text has a contrast ratio of at least 4.5:1, except for the following: 
+                                        
+                                        Large Text
+                                        Large-scale text and images of large-scale text have a contrast ratio of at least 3:1;
+                                        
+                                        Incidental
+                                        Text or images of text that are part of an inactive user interface component, that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant other visual content, have no contrast requirement.
+                                        
+                                        Logotypes
+                                        Text that is part of a logo or brand name has no contrast requirement.(Level AA) 
+                                        <a class="WCAG-Link" href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html">WCAG 2.1 Understanding Contrast Minimum</a>
+                                </div>
+                                
+                                <div class="accordion-subsection">
+                                    <h4 class="accordion-subtitle">Why it matters?</h4>
+                                    <p class="accordion-p">"People with low vision often have difficulty reading text that does not contrast with its background. This can be exacerbated if the person has a color vision deficiency that lowers the contrast even further. Providing a minimum luminance contrast ratio between the text and its background can make the text more readable even if the person does not see the full range of colors. It also works for the rare individuals who see no color." wcag"
+                                    </p>
+                                </div>
+
+                                <div class="accordion-subsection">
+            
+                                    <h4 class="accordion-subtitle">Keep in mind</h4>
+                        
+                                    <ul class="accordion-list">
+                                        <li><b>Aim for a middle ground.</b> The issue with color contrast can be complicated as some people with cognitive disabilities are sensitive to light and could experience eye fatigue or feel distracted when looking at high contrast text and images, such as black text on a white background at a 21:1 contrast ratio. A good middle ground is to aim for a 7:1 contrast ratio, the AAA rating for WCAG. <a class="" href="https://fonts.google.com/knowledge/readability_and_accessibility/introducing_accessibility_in_typography"> Source</a></li>
+                                        <li><b>Use contrast properly.</b> You can make your website’s components stand out to all users by properly using color contrast in your design. The trick is to use brightness and tone, in addition to hues. If you contrast by color, but maintain the same brightness, elements (might) look blended or muddled to those with color deficiencies.  <a class="" href="https://www.audioeye.com/post/8-ways-to-design-a-color-blind-friendly-website/#:~:text=You%20can%20make%20your%20website%27s,to%20those%20with%20color%20deficiencies."> Source</a></li>
+                                    
+                                    </ul>
+                                </div>
+
+                                
+                                <div class="accordion-subsection">
+            
+                                    <h4 class="accordion-subtitle">Example</h4>
+                        
+                                    
+                                        <figure>
+                                            <image  src="/img/Color-Contrast.png" class="about-image" alt="-"></image>
+                                            <figcaption>Color contrast</figcaption>
+                                            </figure>
+                                       
+                                    
+                                </div>
+
+                                <div class="accordion-subsection">
+                                    <h4 class="accordion-subtitle">Test it</h4>
+                                    <p class="accordion-p"> Use a non-destructive <a href="https://www.figma.com/community/plugin/1105916617805028875/grayscale">FIGMA plugin</a> to convert your designs to grayscale to see if any design elements become indistiguishable or difficult to read.</p>
+                                    </p>
+                                </div>
+
+                                <div class="accordion-subsection">
+                                    <h4 class="accordion-subtitle">Additional Resources</h4>
+                                    <ol class="accordion-list">
+                                        <li>
+                                                List Item
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+            
+
+                          <!-- /*non text contrast*/ -->
+                        <h3>
+                            <button type="button" aria-expanded="false" class="accordion-trigger" aria-controls="sect3"
+                                id="accordion3id">
+                                <span class="accordion-title">
+                                    Non-text Contrast
+                                    <span class="accordion-icon"></span>
+                                </span>
+                            </button>
+                        </h3>
+                        <div id="sect3" role="region" aria-labelledby="accordion3id" class="accordion-panel" hidden="">
+                            <div>
+                                <div class="accordion-subsection">
+            
+                                    <h4 class="accordion-subtitle">Guidelines</h4>
+                                    <p class="accordion-p">
+                                        
+                                        The visual presentation of the following have a contrast ratio of at least 3:1 against adjacent color(s):
+
+                                        User Interface Components
+                                        Visual information required to identify user interface components and states, except for inactive components or where the appearance of the component is determined by the user agent and not modified by the author;
+                                        
+                                        Graphical Objects
+                                        Parts of graphics required to understand the content, except when a particular presentation of graphics is essential to the information being conveyed. (Level AA)
+
+                                        <a class="WCAG-Link" href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html">WCAG 2.1 Understanding Contrast Minimum</a>
+                                    </p>
+                                </div>
+                                
+                                <div class="accordion-subsection">
+                                    <h4 class="accordion-subtitle">Why it matters?</h4>
+                                    <p class="accordion-p">  If a graphic is needed to understand the content or functionality of the webpage then it should be perceivable by people with low vision or other impairments without the need for contrast-enhancing assistive technology.
+                                    </p>
+                                </div>
+
+                                <div class="accordion-subsection">
+            
+                                    <h4 class="accordion-subtitle">Keep in mind.</h4>
+                        
+                                    <ul class="accordion-list">
+                                        <li><b>Don’t convey meaning through color alone.</b> Incorporate alternate means of communication—use labels, texture, shapes, and patterns—to prevent confusion among people with color blindness. <a class="" href="https://www.levelaccess.com/blog/color-blindness-accessibility-what-designers-need-to-know/"> Source</a></li>
+                                        <li><b>Avoid using the same color to mean different things.</b> Use color consistently throughout your interface, especially when you use it to help communicate information like status or interactivity. <a class="" href="https://developer.apple.com/design/human-interface-guidelines/color#Best-practices"> Source</a></li>
+                                        <li><b>Avoid certain color combinations.</b> Red/green color blindness is the most common, so avoid green on red or red on green. (Think especially about avoiding using red and green for “bad” and “good” indicators).<a class="" href="http://web-accessibility.carnegiemuseums.org/design/color/"> Source</a></li>
+                                        <li><b>Use texture and patterns.</b> When you need to emphasize certain objects, it’s a good idea to incorporate textures and/or patterns. This is especially helpful for charts and graphs where color is often used to differentiate between items. Adding textures and patterns like checkers, lines, and dots can help make each item stand out as unique and easily identifiable. <a class="" href="https://www.audioeye.com/post/8-ways-to-design-a-color-blind-friendly-website/"> Source</a></li>
+                                    </ul>
+                                </div>
+
+                                
+                                <div class="accordion-subsection">
+            
+                                    <h4 class="accordion-subtitle">Example</h4>
+                        
+                                    <p class="accordion-p">"A form contains both required and optional fields. Instructions at the top of the form explain that required fields are labeled with red text and also with an icon. Users who cannot perceive the difference between the optional field labels and the red labels for the required fields will still be able to see the icon next to the red labels."
+                                        
+                                        <image  src="/img/COLOR.png" class="about-image" alt="Frankie being cute"></image>
+                                    </p>
+                                </div>
+
+                                <div class="accordion-subsection">
+                                    <h4 class="accordion-subtitle">Test it</h4>
+                                    <p class="accordion-p"> Some users have difficulty perceiving color, testing your color combinations by using a tool like <a class="Link" href="https://www.whocanuse.com/?bg=33997c&fg=ffffff&fs=16&fw=">Whocanuse.com</a> will help you understand how color contrast can affect people with different visual impairments.
+                                    </p>
+                                </div>
+
+                                <div class="accordion-subsection">
+                                    <h4 class="accordion-subtitle">Additional Resources</h4>
+                                    <ol class="accordion-list">
+                                        <li>
+                                                List Item
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+            
+
+                </div>
+                </div>
+
+
+                
+
+
+<!-- TYPOGRAPHY AND LANGUAGE section-2 -->
+
+<div id="accordionSection" class="accordion-section">
+    <div class="accordion-header">
+        <h2 class="accordian-name">Typography and Language</h2>
+        <image  src="/img/Typography.png" class="principle-icon" alt="Blue square centered over a gold square"></image>
+    </div>
+    <div id="accordionGroup" class="accordion">
+        <h3>
+            <button type="button" aria-expanded="false" class="accordion-trigger" aria-controls="sect2-1"
+                id="accordion2-1id">
+                <span class="accordion-title">
+                    Typefaces
+                    <span class="accordion-icon"></span>
+                </span>
+            </button>
+        </h3>
+        <div id="sect2-1" role="region" aria-labelledby="accordion2-1id" class="accordion-panel" hidden="">
+            <div>
+                <div class="accordion-subsection">
+
+                    <h4 class="accordion-subtitle">Guidelines</h4>
+                    <p class="accordion-p">WCAG doesn't provide any guidance related to font selection. However, the Americans with Disabilities Act (ADA) does specify of it's requirements: Characters displayed on the screen shall be in a sans serif font. Characters shall be 3/16 inch (4.8 mm) high minimum based on the uppercase letter “I”. <a class="" href="https://www.access-board.gov/ada/#ada-707_7_2">ADA 707.7.2 Characters (Display screen)</a> 
+            
+                    </p>
+                </div>
+                
+                <div class="accordion-subsection">
+                    <h4 class="accordion-subtitle">Why it matters?</h4>
+                    <p class="accordion-p"> Choosing a typeface designed for easy reading ensures that "textual information is accessible to all users, irrespective of their abilities or disabilities.""
+                    </p>
+                </div>
+
+                <div class="accordion-subsection">
+
+                    <h4 class="accordion-subtitle">Keep in Mind</h4>
+        
+                    <ul class="accordion-list">
+                        <li><b>Select clear and readable typefaces.</b> A distinct and straightforward typeface greatly enhances readability. Avoid character ambiguity, where two characters appear remarkably alike, to avoid confusion (like the capital “I” and lowercase “L” ). The more straightforward the typeface, the easier it will be for your users to read.<a href="https://www.a11y-collective.com/blog/wcag-minimum-font-size/#:~:text=The%20WCAG%20recommendation%20is%204.5,at%20least%2024px%20or%20larger"> Source</a></li>
+
+                        <li><b>Limit font styles and varieties. </b> Numerous typefaces or font styles can disorient users. Maintain a small, consistent set of fonts to aid readability and reduce cognitive load, offering a more consistent user interface.<a href="https://www.a11y-collective.com/blog/wcag-minimum-font-size/#:~:text=The%20WCAG%20recommendation%20is%204.5,at%20least%2024px%20or%20larger."> Source</a></li>
+
+                        <li><b>Maintain clarity in letter and word spacing.</b> Avoid crowding letters and tightly packed text, which can be tough, especially for users with reading difficulties. Maintain appropriate spacing using CSS properties like ‘letter-spacing’ and ‘word-spacing’ to ensure clarity.<a href="https://www.a11y-collective.com/blog/wcag-minimum-font-size/#:~:text=The%20WCAG%20recommendation%20is%204.5,at%20least%2024px%20or%20larger."> Source</a></li>
+
+                        <li><b>Avoid using all caps.</b> Detail needed.<a href="#"> Source</a></li>
+                    </ul>
+                </div>
+
+                
+                <div class="accordion-subsection">
+
+                    <h4 class="accordion-subtitle">Example</h4>
+        
+                    <p class="accordion-p">(INCLUDE SANS SERIF TYPEFACE WITH ANNOTATIONS)
+                        
+                        <image  src="/img/Use-of-Color.png" class="about-image" alt="Frankie being cute"></image>
+                    </p>
+                </div>
+
+                <div class="accordion-subsection">
+                    <h4 class="accordion-subtitle">Test it</h4>
+                    <p class="accordion-p"> (need test text)
+                    </p>
+                </div>
+
+                <div class="accordion-subsection">
+                    <h4 class="accordion-subtitle">Additional Resources</h4>
+                    <ol class="accordion-list">
+                        <li class="resource-list">Introducing accessibility in typography</li>
+                        <li class="resource-list">How to Pick the Perfect Font Size: A Guide to WCAG Accessibility</li>
+                        <li class="resource-list">Fontsmith publishes a guide to choosing more accessible typefaces</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- /*color contrast*/ -->
+        <h3>
+            <button type="button" aria-expanded="false" class="accordion-trigger" aria-controls="sect2"
+                id="accordion2id">
+                <span class="accordion-title">
+                    Contrast Minimum
+                    <span class="accordion-icon"></span>
+                </span>
+            </button>
+        </h3>
+        <div id="sect2" role="region" aria-labelledby="accordion2id" class="accordion-panel" hidden="">
+            <div>
+                <div class="accordion-subsection">
+
+                    <h4 class="accordion-subtitle">Guidelines</h4>
+                    <p class="accordion-p">The visual presentation of text and images of text has a contrast ratio of at least 4.5:1, except for the following: 
+                        
+                        Large Text
+                        Large-scale text and images of large-scale text have a contrast ratio of at least 3:1;
+                        
+                        Incidental
+                        Text or images of text that are part of an inactive user interface component, that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant other visual content, have no contrast requirement.
+                        
+                        Logotypes
+                        Text that is part of a logo or brand name has no contrast requirement.(Level AA) 
+                        <a class="WCAG-Link" href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html">WCAG 2.1 Understanding Contrast Minimum</a>
+                </div>
+                
+                <div class="accordion-subsection">
+                    <h4 class="accordion-subtitle">Why it matters?</h4>
+                    <p class="accordion-p">"People with low vision often have difficulty reading text that does not contrast with its background. This can be exacerbated if the person has a color vision deficiency that lowers the contrast even further. Providing a minimum luminance contrast ratio between the text and its background can make the text more readable even if the person does not see the full range of colors. It also works for the rare individuals who see no color." wcag"
+                    </p>
+                </div>
+
+                <div class="accordion-subsection">
+
+                    <h4 class="accordion-subtitle">Keep in mind</h4>
+        
+                    <ul class="accordion-list">
+                        <li><b>Aim for a middle ground.</b> The issue with color contrast can be complicated as some people with cognitive disabilities are sensitive to light and could experience eye fatigue or feel distracted when looking at high contrast text and images, such as black text on a white background at a 21:1 contrast ratio. A good middle ground is to aim for a 7:1 contrast ratio, the AAA rating for WCAG. <a class="" href="https://fonts.google.com/knowledge/readability_and_accessibility/introducing_accessibility_in_typography"> Source</a></li>
+                        <li><b>Use contrast properly.</b> You can make your website’s components stand out to all users by properly using color contrast in your design. The trick is to use brightness and tone, in addition to hues. If you contrast by color, but maintain the same brightness, elements (might) look blended or muddled to those with color deficiencies.  <a class="" href="https://www.audioeye.com/post/8-ways-to-design-a-color-blind-friendly-website/#:~:text=You%20can%20make%20your%20website%27s,to%20those%20with%20color%20deficiencies."> Source</a></li>
+                    
+                    </ul>
+                </div>
+
+                
+                <div class="accordion-subsection">
+
+                    <h4 class="accordion-subtitle">Example</h4>
+        
+                    
+                        <figure>
+                            <image  src="/img/Color-Contrast.png" class="about-image" alt="-"></image>
+                            <figcaption>Color contrast</figcaption>
+                            </figure>
+                       
+                    
+                </div>
+
+                <div class="accordion-subsection">
+                    <h4 class="accordion-subtitle">Test it</h4>
+                    <p class="accordion-p"> Use a non-destructive <a href="https://www.figma.com/community/plugin/1105916617805028875/grayscale">FIGMA plugin</a> to convert your designs to grayscale to see if any design elements become indistiguishable or difficult to read.</p>
+                    </p>
+                </div>
+
+                <div class="accordion-subsection">
+                    <h4 class="accordion-subtitle">Additional Resources</h4>
+                    <ol class="accordion-list">
+                        <li>
+                                List Item
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+
+          <!-- /*non text contrast*/ -->
+        <h3>
+            <button type="button" aria-expanded="false" class="accordion-trigger" aria-controls="sect3"
+                id="accordion3id">
+                <span class="accordion-title">
+                    Non-text Contrast
+                    <span class="accordion-icon"></span>
+                </span>
+            </button>
+        </h3>
+        <div id="sect3" role="region" aria-labelledby="accordion3id" class="accordion-panel" hidden="">
+            <div>
+                <div class="accordion-subsection">
+
+                    <h4 class="accordion-subtitle">Guidelines</h4>
+                    <p class="accordion-p">
+                        
+                        The visual presentation of the following have a contrast ratio of at least 3:1 against adjacent color(s):
+
+                        User Interface Components
+                        Visual information required to identify user interface components and states, except for inactive components or where the appearance of the component is determined by the user agent and not modified by the author;
+                        
+                        Graphical Objects
+                        Parts of graphics required to understand the content, except when a particular presentation of graphics is essential to the information being conveyed. (Level AA)
+
+                        <a class="WCAG-Link" href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html">WCAG 2.1 Understanding Contrast Minimum</a>
+                    </p>
+                </div>
+                
+                <div class="accordion-subsection">
+                    <h4 class="accordion-subtitle">Why it matters?</h4>
+                    <p class="accordion-p">  If a graphic is needed to understand the content or functionality of the webpage then it should be perceivable by people with low vision or other impairments without the need for contrast-enhancing assistive technology.
+                    </p>
+                </div>
+
+                <div class="accordion-subsection">
+
+                    <h4 class="accordion-subtitle">Keep in mind.</h4>
+        
+                    <ul class="accordion-list">
+                        <li><b>Don’t convey meaning through color alone.</b> Incorporate alternate means of communication—use labels, texture, shapes, and patterns—to prevent confusion among people with color blindness. <a class="" href="https://www.levelaccess.com/blog/color-blindness-accessibility-what-designers-need-to-know/"> Source</a></li>
+                        <li><b>Avoid using the same color to mean different things.</b> Use color consistently throughout your interface, especially when you use it to help communicate information like status or interactivity. <a class="" href="https://developer.apple.com/design/human-interface-guidelines/color#Best-practices"> Source</a></li>
+                        <li><b>Avoid certain color combinations.</b> Red/green color blindness is the most common, so avoid green on red or red on green. (Think especially about avoiding using red and green for “bad” and “good” indicators).<a class="" href="http://web-accessibility.carnegiemuseums.org/design/color/"> Source</a></li>
+                        <li><b>Use texture and patterns.</b> When you need to emphasize certain objects, it’s a good idea to incorporate textures and/or patterns. This is especially helpful for charts and graphs where color is often used to differentiate between items. Adding textures and patterns like checkers, lines, and dots can help make each item stand out as unique and easily identifiable. <a class="" href="https://www.audioeye.com/post/8-ways-to-design-a-color-blind-friendly-website/"> Source</a></li>
+                    </ul>
+                </div>
+
+                
+                <div class="accordion-subsection">
+
+                    <h4 class="accordion-subtitle">Example</h4>
+        
+                    <p class="accordion-p">"A form contains both required and optional fields. Instructions at the top of the form explain that required fields are labeled with red text and also with an icon. Users who cannot perceive the difference between the optional field labels and the red labels for the required fields will still be able to see the icon next to the red labels."
+                        
+                        <image  src="/img/COLOR.png" class="about-image" alt="Frankie being cute"></image>
+                    </p>
+                </div>
+
+                <div class="accordion-subsection">
+                    <h4 class="accordion-subtitle">Test it</h4>
+                    <p class="accordion-p"> Some users have difficulty perceiving color, testing your color combinations by using a tool like <a class="Link" href="https://www.whocanuse.com/?bg=33997c&fg=ffffff&fs=16&fw=">Whocanuse.com</a> will help you understand how color contrast can affect people with different visual impairments.
+                    </p>
+                </div>
+
+                <div class="accordion-subsection">
+                    <h4 class="accordion-subtitle">Additional Resources</h4>
+                    <ol class="accordion-list">
+                        <li>
+                                List Item
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+</div>
+</div>
+
+
+
+
+<!-- LAYOUT AND HIERARCHY  section-3 -->
+
+<div id="accordionSection" class="accordion-section">
+    <div class="accordion-header">
+        <h2 class="accordian-name">Layout and Hierarchy</h2>
+        <image  src="/img/Typography.png" class="principle-icon" alt="Blue square centered over a gold square"></image>
+    </div>
+    <div id="accordionGroup" class="accordion">
+        <h3>
+            <button type="button" aria-expanded="false" class="accordion-trigger" aria-controls="sect3-1"
+                id="accordion3-1id">
+                <span class="accordion-title">
+                    Meaningful Sequence
+                    <span class="accordion-icon"></span>
+                </span>
+            </button>
+        </h3>
+        <div id="sect3-1" role="region" aria-labelledby="accordion3-1id" class="accordion-panel" hidden="">
+            <div>
+                <div class="accordion-subsection">
+
+                    <h4 class="accordion-subtitle">Guidelines</h4>
+                    <p class="accordion-p">When the sequence in which content is presented affects its meaning, a correct reading sequence can be programmatically determined. <a class="" href="https://www.w3.org/WAI/WCAG21/Understanding/meaningful-sequence.html">WCAG 1.3.2 Meaningful Sequence</a> 
+                    </p>
+                </div>
+                
+                <div class="accordion-subsection">
+                    <h4 class="accordion-subtitle">Why it matters?</h4>
+                    <p class="accordion-p"> "This Success Criterion may help people who rely on assistive technologies that read content aloud. The meaning evident in the sequencing of the information in the default presentation will be the same when the content is presented in spoken form."
+                    </p>
+                </div>
+
+                <div class="accordion-subsection">
+
+                    <h4 class="accordion-subtitle">Keep in Mind</h4>
+        
+                    <ul class="accordion-list">
+                        <li><b>Semantic markup.</b> The backbone of accessible digital media is a robust semantic structure. This means that the following should be able to be programmatically determined by the computing device: 
+                            <ul>
+                                <li>The purpose of each page element</li>
+                                <li>The reading order of the content.</li>  
+                                <li>The hierarchical structure of the content.</li>
+                                <li>The content itself.</li>    (Accessibility 2, 36)
+                            </ul>
+                        </li>
+
+                        <li><b>Use a Familiar Hierarchy and Design.</b>When designing web pages, select standard components that look and behave the way users expect. Use standard conventions for layout such as:home link in the upper left corner, navigation at the top, and search in the upper right. <a href="https://www.w3.org/WAI/WCAG2/supplemental/patterns/o1p02-familiar-design/">Source</a></li>
+
+                        <li><b>Make it scanable. </b>Use short copy and bulleted lists rather than big blocks of text. This is easier for all readers to scan and it improves accessibility for users who depend on screen readers.<a href="https://brand.ucla.edu/fundamentals/accessibility/color-type"> Source</a></li>
+                    </ul>
+                </div>
+
+                
+                <div class="accordion-subsection">
+
+                    <h4 class="accordion-subtitle">Example</h4>
+        
+                    <p class="accordion-p">(wireframe colums with sequence)
+                        
+                        <image  src="/img/Use-of-Color.png" class="about-image" alt="Frankie being cute"></image>
+                    </p>
+                </div>
+
+                <div class="accordion-subsection">
+                    <h4 class="accordion-subtitle">Test it</h4>
+                    <p class="accordion-p"> (need test text - sequence validator - or comunicating sequence order)
+                    </p>
+                </div>
+
+                <div class="accordion-subsection">
+                    <h4 class="accordion-subtitle">Additional Resources</h4>
+                    <ol class="accordion-list">
+                        <li class="resource-list">-</li>
+                        <li class="resource-list">-</li>
+                        <li class="resource-list">-</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- /*Orientation*/ -->
+        <h3>
+            <button type="button" aria-expanded="false" class="accordion-trigger" aria-controls="sect3-2"
+                id="accordion3-2id">
+                <span class="accordion-title">
+                    Orientation
+                    <span class="accordion-icon"></span>
+                </span>
+            </button>
+        </h3>
+        <div id="sect3-2" role="region" aria-labelledby="accordion3-2id" class="accordion-panel" hidden="">
+            <div>
+                <div class="accordion-subsection">
+
+                    <h4 class="accordion-subtitle">Guidelines</h4>
+                    <p class="accordion-p">Content does not restrict its view and operation to a single display orientation, such as portrait or landscape, unless a specific display orientation is essential. (Level AA) 
+                    <hr>
+                        <p class="accordion-p"><b>Note</b> Examples where a particular display orientation may be essential are a bank check, a piano application, slides for a projector or television, or virtual reality content where content is not necessarily restricted to landscape or portrait display orientation.</p><a class="WCAG-Link" href="https://www.w3.org/WAI/WCAG21/Understanding/orientation.html">WCAG 1.3.4 Understanding Orientation</a>
+                </div>
+                
+                <div class="accordion-subsection">
+                    <h4 class="accordion-subtitle">Why it matters?</h4>
+                    <p class="accordion-p">"Some users have their devices mounted in a fixed orientation (e.g. on the arm of a power wheelchair). Therefore, websites and applications need to support both orientations by not restricting the orientation." Users with dexterity impairments, who have a mounted device will be able to use the content in their fixed orientation.
+                        Users with low-vision will be able to view content in the orientation that works best for them, for example to increase the text size by viewing content in landscape.-WCAG"
+                    </p>
+                </div>
+
+                <div class="accordion-subsection">
+
+                    <h4 class="accordion-subtitle">Keep in mind</h4>
+        
+                    <ul class="accordion-list">
+                        <li><b>Design content to reflow.</b> The visual presentation shouldn’t require any specific screen size, orientation, device, browser, or any other limitations on the part of the user. Instead, the design and content should gracefully reflow and wrap from one viewport to another, regardless of the size or zoom level. This is sometimes referred to as responsive or liquid design, and this flexibility is at the core of an accessible visual presentation.<a class="" href="https://fonts.google.com/knowledge/readability_and_accessibility/introducing_accessibility_in_typography"> Accessibility 2 Handbook</a></li>
+                    </ul>
+                </div>
+
+                
+                <div class="accordion-subsection">
+
+                    <h4 class="accordion-subtitle">Example</h4>
+        
+                    
+                        <figure>
+                            <image  src="/img/Color-Contrast.png" class="about-image" alt="-"></image>
+                            <figcaption>Color contrast</figcaption>
+                            </figure>
+                       
+                    
+                </div>
+
+                <div class="accordion-subsection">
+                    <h4 class="accordion-subtitle">Test it</h4>
+                    <p class="accordion-p">Need test text - try it out. </p>
+                    </p>
+                </div>
+
+                <div class="accordion-subsection">
+                    <h4 class="accordion-subtitle">Additional Resources</h4>
+                    <ol class="accordion-list">
+                        <li>
+                                WCAG 2.1 Understanding SC 1.3.4: Orientation (Level AA) 
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+
+          <!-- /*Resize Text*/ -->
+        <h3>
+            <button type="button" aria-expanded="false" class="accordion-trigger" aria-controls="sect3-3"
+                id="accordion3-3id">
+                <span class="accordion-title">
+                    Resize Text
+                    <span class="accordion-icon"></span>
+                </span>
+            </button>
+        </h3>
+        <div id="sect3-3" role="region" aria-labelledby="accordion3-3id" class="accordion-panel" hidden="">
+            <div>
+                <div class="accordion-subsection">
+
+                    <h4 class="accordion-subtitle">Guidelines</h4>
+                    <p class="accordion-p">
+                        
+                        Except for captions and images of text, text can be resized without assistive technology up to 200 percent without loss of content or functionality. (Level AA)
+
+                        <a class="WCAG-Link" href="https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html">WCAG 2.1 Understanding Resize Text</a>
+                    </p>
+                </div>
+                
+                <div class="accordion-subsection">
+                    <h4 class="accordion-subtitle">Why it matters?</h4>
+                    <p class="accordion-p"> "This Success Criterion helps people with low vision by letting them increase text size in content so that they can read it."
+                    </p>
+                </div>
+
+                <div class="accordion-subsection">
+
+                    <h4 class="accordion-subtitle">Keep in mind.</h4>
+        
+                    <ul class="accordion-list">
+                        <li><b>Use scalable rather than absolute units.</b> <a class="" href="https://cookiecrook.com/AIR/2003/train/accessiblecss.php"> Source</a></li>
+                        <li><b>Use relative measurements.</b>Using relative measurements to set column widths so that lines can average 80 characters or less when the browser is resized. The purpose of this technique is to ensure that CSS is used in a way that allows users to view content in such a way that line length can average 80 characters or less. This makes it possible for users with certain reading or vision disabilities that have trouble keeping their place when reading long lines of text to view and interact with the content more efficiently. This technique also allows for column width to grow wider as font sizes increase, which will reduce the possibility of clipping as the text size increases.. <a class="" href="https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/C20"> Source</a></li>
+             
+                    </ul>
+                </div>
+
+                
+                <div class="accordion-subsection">
+
+                    <h4 class="accordion-subtitle">Example</h4>
+        
+                    <p class="accordion-p">"A form contains both required and optional fields. Instructions at the top of the form explain that required fields are labeled with red text and also with an icon. Users who cannot perceive the difference between the optional field labels and the red labels for the required fields will still be able to see the icon next to the red labels."
+                        
+                        <image  src="/img/COLOR.png" class="about-image" alt="Frankie being cute"></image>
+                    </p>
+                </div>
+
+                <div class="accordion-subsection">
+                    <h4 class="accordion-subtitle">Test it</h4>
+                    <p class="accordion-p"> "Test to see that the columns are defined in relative units.Check to see that line length can be set to 80 characters or less by resizing the browser window."
+                    </p>
+                </div>
+
+                <div class="accordion-subsection">
+                    <h4 class="accordion-subtitle">Additional Resources</h4>
+                    <ol class="accordion-list">
+                        <li>
+                            Techniques for WCAG 2.0 https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/C20
+                    </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+</div>
+</div>
+
+
+<!-- Language? Section 4-->
+
+<div id="accordionSection" class="accordion-section">
+    <div class="accordion-header">
+        <h2 class="accordian-name">Language</h2>
+        <image  src="/img/Typography.png" class="principle-icon" alt="Blue square centered over a gold square"></image>
+    </div>
+
+<!--Heading and Labels-->
+    <div id="accordionGroup" class="accordion">
+        <h3>
+            <button type="button" aria-expanded="false" class="accordion-trigger" aria-controls="sect4-1"
+                id="accordion4-1id">
+                <span class="accordion-title">
+                    Meaningful Sequence
+                    <span class="accordion-icon"></span>
+                </span>
+            </button>
+        </h3>
+        <div id="sect4-1" role="region" aria-labelledby="accordion4-1id" class="accordion-panel" hidden="">
+            <div>
+                <div class="accordion-subsection">
+
+                    <h4 class="accordion-subtitle">Guidelines</h4>
+                    <p class="accordion-p">When the sequence in which content is presented affects its meaning, a correct reading sequence can be programmatically determined. <a class="" href="https://www.w3.org/WAI/WCAG21/Understanding/meaningful-sequence.html">WCAG 1.3.2 Meaningful Sequence</a> 
+                    </p>
+                </div>
+                
+                <div class="accordion-subsection">
+                    <h4 class="accordion-subtitle">Why it matters?</h4>
+                    <p class="accordion-p"> "This Success Criterion may help people who rely on assistive technologies that read content aloud. The meaning evident in the sequencing of the information in the default presentation will be the same when the content is presented in spoken form."
+                    </p>
+                </div>
+
+                <div class="accordion-subsection">
+
+                    <h4 class="accordion-subtitle">Keep in Mind</h4>
+        
+                    <ul class="accordion-list">
+                        <li><b>Semantic markup.</b> The backbone of accessible digital media is a robust semantic structure. This means that the following should be able to be programmatically determined by the computing device: 
+                            <ul>
+                                <li>The purpose of each page element</li>
+                                <li>The reading order of the content.</li>  
+                                <li>The hierarchical structure of the content.</li>
+                                <li>The content itself.</li>    (Accessibility 2, 36)
+                            </ul>
+                        </li>
+
+                        <li><b>Use a Familiar Hierarchy and Design.</b>When designing web pages, select standard components that look and behave the way users expect. Use standard conventions for layout such as:home link in the upper left corner, navigation at the top, and search in the upper right. <a href="https://www.w3.org/WAI/WCAG2/supplemental/patterns/o1p02-familiar-design/">Source</a></li>
+
+                        <li><b>Make it scanable. </b>Use short copy and bulleted lists rather than big blocks of text. This is easier for all readers to scan and it improves accessibility for users who depend on screen readers.<a href="https://brand.ucla.edu/fundamentals/accessibility/color-type"> Source</a></li>
+                    </ul>
+                </div>
+
+                
+                <div class="accordion-subsection">
+
+                    <h4 class="accordion-subtitle">Example</h4>
+        
+                    <p class="accordion-p">(wireframe colums with sequence)
+                        
+                        <image  src="/img/Use-of-Color.png" class="about-image" alt="Frankie being cute"></image>
+                    </p>
+                </div>
+
+                <div class="accordion-subsection">
+                    <h4 class="accordion-subtitle">Test it</h4>
+                    <p class="accordion-p"> (need test text - sequence validator - or comunicating sequence order)
+                    </p>
+                </div>
+
+                <div class="accordion-subsection">
+                    <h4 class="accordion-subtitle">Additional Resources</h4>
+                    <ol class="accordion-list">
+                        <li class="resource-list">-</li>
+                        <li class="resource-list">-</li>
+                        <li class="resource-list">-</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+
+
+    <!-- /*Images of Text*/ -->
+        <h3>
+            <button type="button" aria-expanded="false" class="accordion-trigger" aria-controls="sect4-2"
+                id="accordion4-2id">
+                <span class="accordion-title">
+                    Images of Text
+                    <span class="accordion-icon"></span>
+                </span>
+            </button>
+        </h3>
+        <div id="sect4-2" role="region" aria-labelledby="accordion4-2id" class="accordion-panel" hidden="">
+            <div>
+                <div class="accordion-subsection">
+
+                    <h4 class="accordion-subtitle">Guidelines</h4>
+                    <p class="accordion-p">Content does not restrict its view and operation to a single display orientation, such as portrait or landscape, unless a specific display orientation is essential. (Level AA) 
+                    <hr>
+                        <p class="accordion-p"><b>Note</b> Examples where a particular display orientation may be essential are a bank check, a piano application, slides for a projector or television, or virtual reality content where content is not necessarily restricted to landscape or portrait display orientation.</p><a class="WCAG-Link" href="https://www.w3.org/WAI/WCAG21/Understanding/orientation.html">WCAG 1.3.4 Understanding Orientation</a>
+                </div>
+                
+                <div class="accordion-subsection">
+                    <h4 class="accordion-subtitle">Why it matters?</h4>
+                    <p class="accordion-p">"Some users have their devices mounted in a fixed orientation (e.g. on the arm of a power wheelchair). Therefore, websites and applications need to support both orientations by not restricting the orientation." Users with dexterity impairments, who have a mounted device will be able to use the content in their fixed orientation.
+                        Users with low-vision will be able to view content in the orientation that works best for them, for example to increase the text size by viewing content in landscape.-WCAG"
+                    </p>
+                </div>
+
+                <div class="accordion-subsection">
+
+                    <h4 class="accordion-subtitle">Keep in mind</h4>
+        
+                    <ul class="accordion-list">
+                        <li><b>Design content to reflow.</b> The visual presentation shouldn’t require any specific screen size, orientation, device, browser, or any other limitations on the part of the user. Instead, the design and content should gracefully reflow and wrap from one viewport to another, regardless of the size or zoom level. This is sometimes referred to as responsive or liquid design, and this flexibility is at the core of an accessible visual presentation.<a class="" href="https://fonts.google.com/knowledge/readability_and_accessibility/introducing_accessibility_in_typography"> Accessibility 2 Handbook</a></li>
+                    </ul>
+                </div>
+
+                
+                <div class="accordion-subsection">
+
+                    <h4 class="accordion-subtitle">Example</h4>
+        
+                    
+                        <figure>
+                            <image  src="/img/Color-Contrast.png" class="about-image" alt="-"></image>
+                            <figcaption>Color contrast</figcaption>
+                            </figure>
+                       
+                    
+                </div>
+
+                <div class="accordion-subsection">
+                    <h4 class="accordion-subtitle">Test it</h4>
+                    <p class="accordion-p">Need test text - try it out. </p>
+                    </p>
+                </div>
+
+                <div class="accordion-subsection">
+                    <h4 class="accordion-subtitle">Additional Resources</h4>
+                    <ol class="accordion-list">
+                        <li>
+                                WCAG 2.1 Understanding SC 1.3.4: Orientation (Level AA) 
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+
+          <!-- /*Alt Text*/ -->
+        <h3>
+            <button type="button" aria-expanded="false" class="accordion-trigger" aria-controls="sect4-3"
+                id="accordion4-3id">
+                <span class="accordion-title">
+                    Alt Text
+                    <span class="accordion-icon"></span>
+                </span>
+            </button>
+        </h3>
+        <div id="sect4-3" role="region" aria-labelledby="accordion4-3id" class="accordion-panel" hidden="">
+            <div>
+                <div class="accordion-subsection">
+
+                    <h4 class="accordion-subtitle">Guidelines</h4>
+                    <p class="accordion-p">
+                        
+                        Except for captions and images of text, text can be resized without assistive technology up to 200 percent without loss of content or functionality. (Level AA)
+
+                        <a class="WCAG-Link" href="https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html">WCAG 2.1 Understanding Resize Text</a>
+                    </p>
+                </div>
+                
+                <div class="accordion-subsection">
+                    <h4 class="accordion-subtitle">Why it matters?</h4>
+                    <p class="accordion-p"> "This Success Criterion helps people with low vision by letting them increase text size in content so that they can read it."
+                    </p>
+                </div>
+
+                <div class="accordion-subsection">
+
+                    <h4 class="accordion-subtitle">Keep in mind.</h4>
+        
+                    <ul class="accordion-list">
+                        <li><b>Use scalable rather than absolute units.</b> <a class="" href="https://cookiecrook.com/AIR/2003/train/accessiblecss.php"> Source</a></li>
+                        <li><b>Use relative measurements.</b>Using relative measurements to set column widths so that lines can average 80 characters or less when the browser is resized. The purpose of this technique is to ensure that CSS is used in a way that allows users to view content in such a way that line length can average 80 characters or less. This makes it possible for users with certain reading or vision disabilities that have trouble keeping their place when reading long lines of text to view and interact with the content more efficiently. This technique also allows for column width to grow wider as font sizes increase, which will reduce the possibility of clipping as the text size increases.. <a class="" href="https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/C20"> Source</a></li>
+             
+                    </ul>
+                </div>
+
+                
+                <div class="accordion-subsection">
+
+                    <h4 class="accordion-subtitle">Example</h4>
+        
+                    <p class="accordion-p">"A form contains both required and optional fields. Instructions at the top of the form explain that required fields are labeled with red text and also with an icon. Users who cannot perceive the difference between the optional field labels and the red labels for the required fields will still be able to see the icon next to the red labels."
+                        
+                        <image  src="/img/COLOR.png" class="about-image" alt="Frankie being cute"></image>
+                    </p>
+                </div>
+
+                <div class="accordion-subsection">
+                    <h4 class="accordion-subtitle">Test it</h4>
+                    <p class="accordion-p"> "Test to see that the columns are defined in relative units.Check to see that line length can be set to 80 characters or less by resizing the browser window."
+                    </p>
+                </div>
+
+                <div class="accordion-subsection">
+                    <h4 class="accordion-subtitle">Additional Resources</h4>
+                    <ol class="accordion-list">
+                        <li>
+                            Techniques for WCAG 2.0 https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/C20
+                    </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+</div>
+
+<!-- INTERACTIONS section-2 -->
+
+<!--MEDIA section-2 -->
+
+         
+
+
+
+        </section>
+
+        
+        <footer>
+            <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+            <p class="small">A project by Lauren Pritchard &copy;2024</p>
+        </footer>
+
+
+    </main>
+
+    <!--a non-blocking javascript resource-->
+    <script src="scripts.js">
+
+
+    </script>
+</body>
+
+</html>
