@@ -32,18 +32,18 @@
 
     <header class="header__content">
         <a href="index-v2.html"
-            class="logo">
-           Make it <u>accessible</u>.
+            class="logo"><!--#main will be better for screenreaders, but is keeping the name from showing up-->
+            Make it accessible.
         </a>
 
         <nav>
             <ul class="nav__list">
-                <li><a href="/resources.html" class="nav__link">Resources</a></li>
+                <li><a href="/resources.html" class="current-page"><span class="visually-hidden">Current
+                            Page</span>Resources</a></li>
                 <li><a href="about.html" class="nav__link">About</a></li>
             </ul>
         </nav>
     </header>
-    
     <!--Unique content of page goes here-->
     <main id="main">
         <h1>Resources</h1>
