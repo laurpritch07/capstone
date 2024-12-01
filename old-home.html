@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <!--a viewport declaration which does not disable zooming-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--a non-blocking base 64-encoded font resource-->
+        <link rel="stylesheet" href="fonts.css" media="none" onload="if(media!='all')media='all'">
+        <noscript><link rel="stylesheet" href="fonts.css"></noscript>
+
+        <!--a non-blocking stylesheet-->
+        <link rel="stylesheet" href="main.css" media="none" onload="if(media!='all')media='all'">
+        <noscript><link rel="stylesheet" href="main.css"></noscript>
+        
+        <!--Icon link -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>Accessiblity Essentials</title>
+    </head>
+
+    <body>
+        <!--Skip link for keyboard users-->
+        <a href="#main">skip to main content</a>
+
+        <!--logo/page navigation goes here-->
+
+        <header class="header__content">    
+                <a href="#" class="logo"><!--#main will be better for screenreaders, but is keeping the name from showing up-->
+                    Accessibly
+                </a>
+
+            <nav>
+                <ul class="nav__list">
+                    <li><a href="/plan.html" class="nav__link">Plan</a></li>
+                    <li><a href="/design.html" class="nav__link">Design</a></li>
+                    <li><a href="/develop.html" class="nav__link">Develop</a></li>
+                    <li><a href="/resources.html" class="nav__link">Resources</a></li>
+                    <li><a href="/about.html" class="nav__link">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!--Unique content of page goes here-->
+        <main id="main">
+            <h1>Accessibly</h1>
+            <p class="subtitle">A beginners guide to designing for the web.</p>
+            <div class="more"></div>
+                        <p><b>The Concept</b> dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum
+                            est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus,
+                            ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus.
+                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                            Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex.
+                            Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis
+                            convallis diam sit amet lacinia. Aliquam in elementum tellus.
+                            Curabitur tempor quis eros tempus lacinia. Nam bibendum pellentesque quam a convallis. Sed ut
+                            vulputate nisi. Integer in felis sed leo vestibulum venenatis. Suspendisse quis arcu sem. Aenean
+                            feugiat ex eu vestibulum vestibulum. Morbi a eleifend magna. Nam metus lacus, porttitor eu
+                            mauris a, blandit ultrices nibh. Mauris sit amet magna non ligula vestibulum eleifend. Nulla
+                            varius volutpat turpis sed lacinia. Nam eget mi in purus lobortis eleifend. Sed nec ante dictum
+                            sem condimentum ullamcorper quis venenatis nisi. Proin vitae facilisis nisi, ac posuere leo.
+                        </p>
+                    </div>
+            <section class="subsection">
+                <h2>Developing an accessibilty practice.</h2>
+                    <p>dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum
+                    est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus,
+                    ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus.</p>
+
+                <button class="x-large plan">
+                    <h3>Planning</h3>
+                    <p>dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictumest a, mattis tellus. </p>
+                </button>
+                <button class="x-large design">
+                    <h3>Designing</h3>
+                    <p>dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictumest a, mattis tellus. </p>
+                </button>
+                <button class="x-large development">
+                    <h3>Developing</h3>
+                    <p>dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictumest a, mattis tellus. </p>
+                </button>
+                <button class="x-large planning">
+                    <h3>Testing/Refinement</h3>
+                    <p>dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictumest a, mattis tellus. </p>
+                </button>
+            </section>
+            <p class="pull-quote">Good accessibility is about compliance, great accessibility is about empathy. -Sheri Byrne-Haber, CPACC</p>
+            <section class="subsection">
+                <h2>What inspired this project?</h2>
+                <p>dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictumest a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus,
+                </p>
+                <a class="btn default" href="about.html">Learn more about this project</a>
+            </section>
+            <footer>
+                <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
+                <p class="small">A project by Lauren Pritchard &copy;2024</p>
+            </footer>
+
+
+        </main>
+
+        <!--a non-blocking javascript resource-->
+        <script src="scripts.js">
+           
+
+        </script>
+    </body>
+</html>

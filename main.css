@@ -1,460 +1,770 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+
+
+
 :root {
-    --black: #1a1a1a;
-    --green: #7bdcb5;
-    --yellow: #FFD100;
-    --pink: #f78da7;
-    --blue: #8ed1fc;
-    --neutral-300: #f5f5f5;
-    --background: #f8f8f8;
-    --neutral-200: #CCCCCC;
+  --black: #1a1a1a;
+  --green: #7bdcb5;
+  --yellow: #FFD100;
+  --pink: #f78da7;
+  --blue: #0EB2FF;
+  --neutral-300: #f5f5f5;
+  /* --background: #f8f8f8; */
+  --background: #fff;
+  --neutral-200: #CCCCCC;
+  --inactive: #919191;
 }
 
 @media print {
-    body > *:not(main) {
-        display: none;
-    }
+  body>*:not(main) {
+    display: none;
+  }
 }
 
-@media (max-width: 20em) {
-    .logo {
-        display: block;
-        text-align: center;
-    }
 
-}
+
 /*To make skip links available to keyboard users, we should bring into view on focus*/
 [href="#main"] {
-    position: absolute;
-    top: 0;
-    right: 100%;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  z-index: 99;
 }
 
 [href="#main"]:focus {
-    right: auto;
+  right: auto;
 }
 
 html {
-    /* This algorithm ensures everything scales incrementally and proportionately relative to the viewport */
-    font-size: calc(.5em + 1vw);
-    font-family: "Inter", sans-serif;
-    background: #f8f8f8;
-    margin: 1rem;
-    color: var(--black);
-    max-width: 45rem;
-    margin: 0 auto;
+  /* This algorithm ensures everything scales incrementally and proportionately relative to the viewport */
+  /* font-size: calc(.5em + 1vw); */
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  background: var(--background);
+  margin: 1rem;
+  color: var(--black);
+  max-width: 60rem;
+  margin: 0 auto;
 }
+
 
 
 /* Header */
 
 .logo {
-    color: var(--black);
-    text-decoration: none;
-    font-weight: 700;
+  color: var(--black);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.logo:hover {
+  color: var(--blue);
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 .header__content {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    padding-top: .5em;
-    padding-bottom: .5em;
-    background: var(--background);
-    z-index: 99;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* position: sticky;
+  top: 0; */
+  padding-top: .5em;
+  padding-bottom: .5em;
+  background: var(--background);
+  z-index: 99;
+  /* border-bottom: 1px solid var(--black); */
 }
 
 
 /* Navigation goes here */
 .nav__list {
-    display: flex;
-    column-gap: 16px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    }
+  display: flex;
+  column-gap: .85rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
 .nav__link {
-    color: var(--neutral-200);
-    text-decoration: none;
-    transition: all 0.4s;
-    position: relative;
-    font-size: .75rem;
-    padding: 0.5rem;
-    }
+  color: var(--black);
+  text-decoration: none;
+  transition: all 0.4s;
+  position: relative;
+  font-size: .75rem;
+  padding: 0.5rem;
+  font-weight: 600;
+}
 
-    
-    .logo {
-    font-size: 1rem;
-    }
+.nav__link:hover  {
+  color: var(--blue);
+  text-decoration: underline;
+  transition: all 0.4s;
+  position: relative;
+  font-size: .75rem;
+  padding: 0.5rem;
+  font-weight: 600;
+}
+
+
+
+.logo {
+  font-size: 1rem;
+}
+
 
 
 main {
-    /* This max-width ensures a line of text will measure to 60characters widet */
-    max-width: 50rem;
-    margin: 0 auto;
+  /* This max-width ensures a line of text will measure to 60characters widet */
+  max-width: 60rem;
+  margin: 0 auto;
 }
 
 a.current-page {
-    transition: all 0.4s;
-    position: relative;
-    font-size: .75rem;
-    padding: 0.5rem;
-    text-decoration: none;
-    color: var(--black);
-    text-shadow: 0.05em 0 0 #fff, -0.05em 0 0 #fff,
-    0 0.05em 0 #fff, 0 -0.05em 0 #fff,
-    0.1em 0 0 #fff, -0.1em 0 0 #fff,
-    0 0.1em 0 #fff, 0 -0.1em 0 #fff;
-background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
-background-repeat: repeat-x;
-background-position: bottom 0.05em center;
-background-size: 100% 0.095em;
+  transition: all 0.4s;
+  position: relative;
+  text-decoration: underline;
+  padding: 0.5rem;
+  font-size: .75rem;
+  color: var(--black);
+  font-weight: 600;
+}
+
+a.current-page:hover {
+  transition: all 0.4s;
+  position: relative;
+  text-decoration: underline;
+  padding: 0.5rem;
+  font-size: .75rem;
+  color: var(--blue);
+  font-weight: 600;
 }
 
 /* visually hidden class invokes a special set of properties devised to hide the element viusally w/o it becoming silenced by screenreader*/
 .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(1px, 1px, 1px, 1px);
-    white-space: nowrap;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
 }
+
 @media (min-width: 120rem) {
-    html {
-        font-size: 150%;
-    }
+  html {
+    font-size: 120%;
+  }
 }
 
-p {
-    margin: 1.5rem 0;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #222;
+body {
+  margin: 2rem;
 }
 
-/* improved link underlines-underline doesn't intersect with descenders*/ 
-p a{
- text-decoration: none;
- text-shadow: 0.05em 0 0 #fff, -0.05em 0 0 #fff,
+
+p a:link {
+  text-decoration: none;
+  text-shadow: 0.05em 0 0 #fff, -0.05em 0 0 #fff,
     0 0.05em 0 #fff, 0 -0.05em 0 #fff,
     0.1em 0 0 #fff, -0.1em 0 0 #fff,
     0 0.1em 0 #fff, 0 -0.1em 0 #fff;
-background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
-background-repeat: repeat-x;
-background-position: bottom 0.05em center;
-background-size: 100% 0.05em;
+  background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
+  background-repeat: repeat-x;
+  background-position: bottom 0.05em center;
+  background-size: 100% 0.05em;
+  color: var(--black);
 }
 
-/* Strengthen the appearance of focus style for paragraph links across browsers with background color solution. This creates a filled box which is easier to identify as focus moves*/  
+p a:visited {
+  text-decoration: none;
+  text-shadow: 0.05em 0 0 #fff, -0.05em 0 0 #fff,
+    0 0.05em 0 #fff, 0 -0.05em 0 #fff,
+    0.1em 0 0 #fff, -0.1em 0 0 #fff,
+    0 0.1em 0 #fff, 0 -0.1em 0 #fff;
+  background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
+  background-repeat: repeat-x;
+  background-position: bottom 0.05em center;
+  background-size: 100% 0.05em;
+}
+
+p a:hover {
+  text-decoration: none;
+  text-shadow: 0.05em 0 0 #fff, -0.05em 0 0 #fff,
+    0 0.05em 0 #fff, 0 -0.05em 0 #fff,
+    0.1em 0 0 #fff, -0.1em 0 0 #fff,
+    0 0.1em 0 #fff, 0 -0.1em 0 #fff;
+  background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
+  background-repeat: repeat-x;
+  background-position: bottom 0.05em center;
+  background-size: 100% 0.05em;
+  color: var(--blue);
+}
+
+p a:active {
+  text-decoration: none;
+  text-shadow: 0.05em 0 0 #fff, -0.05em 0 0 #fff,
+    0 0.05em 0 #fff, 0 -0.05em 0 #fff,
+    0.1em 0 0 #fff, -0.1em 0 0 #fff,
+    0 0.1em 0 #fff, 0 -0.1em 0 #fff;
+  background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
+  background-repeat: repeat-x;
+  background-position: bottom 0.05em center;
+  background-size: 100% 0.05em;
+  color: var(--blue);
+}
+
+/* improved link underlines-underline doesn't intersect with descenders*/
+/* p a {
+  text-decoration: none;
+  text-shadow: 0.05em 0 0 #fff, -0.05em 0 0 #fff,
+    0 0.05em 0 #fff, 0 -0.05em 0 #fff,
+    0.1em 0 0 #fff, -0.1em 0 0 #fff,
+    0 0.1em 0 #fff, 0 -0.1em 0 #fff;
+  background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
+  background-repeat: repeat-x;
+  background-position: bottom 0.05em center;
+  background-size: 100% 0.05em;
+} */
+
+/* Strengthen the appearance of focus style for paragraph links across browsers with background color solution. This creates a filled box which is easier to identify as focus moves*/
 p a:focus {
-    outline: none;
-    background-color: #cef;
-    text-shadow: 0.05em 0 0 #cef, -0.05em 0 0 #cef,
+  outline: none;
+  background-color: #cef;
+  text-shadow: 0.05em 0 0 #cef, -0.05em 0 0 #cef,
     0 0.05em 0 #cef, 0 -0.05em 0 #cef,
     0.1em 0 0 #cef, -0.1em 0 0 #cef,
     0 0.1em 0 #cef, 0 -0.1em 0 #cef;
-    
+
+}
+
+.level {
+  font-size: .75rem;
 }
 
 
 /* Text decoration fallback if older browser does not support gradient backgrounds*/
 .ie-lte-9 {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .about-image {
-    display: block;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    object-position: 50% 50%;
-    padding-top: .75rem;
-    padding-bottom: .75rem;
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-position: 50% 50%;
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+}
+
+.principle-icon {
+  display: inline-block;
+  height: 8vh;
+  width: auto;
+  margin-right: 4px;
+  vertical-align: middle;
+  padding-right: .25rem;
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.accordian-name {
+  display: inline-block;
 }
 
 h1 {
-    font-size: 4rem;
-    margin-bottom: 0;
+  font-size: calc(100vw / 18);
 
+  line-height: 1.25em;
 }
+
 h2 {
- font-weight: 400;
- font-size: 1.75rem;
- line-height: 1.5em;
+  font-size: 1.802rem;
+  font-weight: 600;
+  line-height: 1.5em;
 }
 
 h3 {
-    font-weight: 400;
-    font-size: 1.2rem;
-    line-height: 1.5em;
+  font-size: 24px;
+  line-height: 1.5em;
+  font-weight: 500;
+  padding-top: .5rem;
+  margin-top: 0;
 }
+
+h4 {
+  font-size: 1.424rem;
+  margin-top: 0;
+  margin-bottom: .5rem;
+}
+
+h5 {
+  font-size: 1.266rem;
+}
+
+h6 {
+  font-size: 1.125rem;
+}
+
+p {
+
+  margin: 1.5rem 0;
+  line-height: 1.6;
+  color: var(--black);
+}
+
+
+
 
 .subtitle {
-    font-size: .75rem;
-    font-weight: 600;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
-.subsection {
-    border-top: solid 1px var(--black);
-    padding-bottom: 2rem;
-}
 
 .center-50 {
-    max-width: 25rem;
-    margin: 1.5em auto;
+  max-width: 50rem;
+  margin: 1.5em auto;
+  border-top: 1px solid var(--black);
+  padding-top: .5rem;
 
 }
 
 .pull-quote {
-    font-size: 2rem;
-    font-weight: 700;
-    padding: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 2rem;
 }
 
 /* Buttons */
 .x-large {
-    text-align: left;
-    width: 100%;
-    padding-top: .5rem;
-    padding-bottom: .5rem;
-    padding-left: 1rem;
-    border-radius: .5rem;
-    border: none;
-    margin-top: 1rem;
-    color: var(--black);
-    border: 2px solid var(--black);
-    background-color: var(--background);
+  text-align: left;
+  width: 100%;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  padding-left: 1rem;
+  border-radius: .5rem;
+  border: none;
+  margin-top: 1rem;
+  color: var(--black);
+  border: 2px solid var(--black);
+  background-color: var(--background);
 }
 
 .x-large h3 {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .x-large p {
-    margin-top: 0;
+  margin-top: 0;
 }
 
-.plan:hover {
-    background-color: var(--green);
-}
-
-.design:hover {
-    background-color: var(--yellow);
-}
-
-.development:hover {
-    background-color: var(--pink);
-}
-
-.planning:hover {
-    background-color: var(--blue);
-}
 
 .btn {
-    background-color: var(--background);
-    border: 2px solid var(--black);
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    text-decoration: none;
-    color: var(--black)
+  background-color: var(--background);
+  border: 2px solid var(--black);
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  color: var(--black)
 }
 
 .default:hover {
-    background: #e7e7e7;
-  }
-
-/* Paragraph styles */
-.small {
-    font-size: .5rem;
+  background: #e7e7e7;
 }
+
+
 
 /* Scroll to the top button */
 
 #myBtn {
-    display: none; /* Hidden by default */
-    position: fixed; /* Fixed/sticky position */
-    bottom: 1rem; /* Place the button at the bottom of the page */
-    right: 2rem; /* Place the button 30px from the right */
-    z-index: 99; /* Make sure it does not overlap */
-    background-color: var(--background);
-    border: 2px solid var(--black);
-    color: var(--black);
-    cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 8px 16px;
-    border-radius: 4px;
-  }
-  
-  #myBtn:hover {
-    background: #e7e7e7;
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 1rem;
+  /* Place the button at the bottom of the page */
+  right: 2rem;
+  /* Place the button 30px from the right */
+  z-index: 99;
+  /* Make sure it does not overlap */
+  background-color: var(--background);
+  border: 2px solid var(--black);
+  color: var(--black);
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background: #e7e7e7;
+}
+
+footer {
+  border-top: solid 1px var(--black);
+}
+
+
+/* Accordian section */
+.accordion-section {
+  border: 2px solid var(--black);
+  border-radius: 7px;
+  margin-bottom: 3rem;
+}
+
+.accordion-header {
+  color: var(--black);
+
+  padding: .125em 1.5em;
+
+
+  border-bottom: 1px solid var(--black);
+}
+.accordion-subtitle {
+  font-weight: 700;
+  font-size: 1rem;
+  padding-bottom: 1rem;
+}
+
+
+
+.accordion-p {
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.small {
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.accordion {
+  margin: 0;
+  padding: 0;
+}
+
+.accordion h3 {
+  margin: 0;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  background-color: var(--background);
+}
+
+.accordion:focus-within {
+  border-color: var(--blue);
+}
+
+.accordion:focus-within h3 {
+  background-color: var(--background);}
+
+.accordion>*+* {
+  /* border-top: 1px solid hsl(0deg 0% 52%); */
+}
+
+.accordion-trigger {
+  background: none;
+  color: var(--black);
+  display: block;
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 0;
+  padding: 1em 1.5em;
+  position: relative;
+  text-align: left;
+  width: 100%;
+  outline: none;
+}
+
+.accordion-trigger:focus,
+.accordion-trigger:hover {
+  color: var(--blue);
+}
+
+.accordion-trigger:focus {
+  outline: 4px solid transparent;
+}
+
+.accordion>*:first-child .accordion-trigger,
+.accordion>*:first-child {
+  border-radius: 5px 5px 0 0;
+}
+
+.accordion>*:last-child .accordion-trigger,
+.accordion>*:last-child {
+  border-radius: 0 0 5px 5px;
+}
+
+button {
+  border-style: none;
+  border-bottom: 1px solid var(--black);
+  cursor: pointer;  
+}
+
+
+
+
+figcaption {
+  font-size: 12px;
+}
+
+.accordion-trigger[aria-expanded="true"] {
+  border-bottom: none;
+}
+
+
+
+
+
+.accordion button::-moz-focus-inner {
+  border: 0;
+}
+
+
+.accordion-title {
+  display: block;
+  pointer-events: none;
+  border: transparent 2px solid;
+  border-radius: 5px;
+  padding-top: 0.25em;
+  outline: none;
+  color: var(--black);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+
+
+hr {
+  width: 100%;
+  margin-left: 0;
+  border: 1px solid var(--black)
+}
+
+.accordion-trigger:focus .accordion-title,
+.accordion-trigger:hover .accordion-title {
+  color: var(--blue);}
+
+.accordion-trigger:focus-visible .accordion-title {
+    border-color: var(--blue)
   }
 
-  footer {
-    border-top: solid 1px var(--black);
-  }
+.accordion-icon {
+  border: solid currentcolor;
+  border-width: 0 2px 2px 0;
+  height: 0.5rem;
+  pointer-events: none;
+  position: absolute;
+  right: 2em;
+  top: 50%;
+  transform: translateY(-60%) rotate(45deg);
+  width: 0.5rem;
+}
+
+.accordion-trigger:focus .accordion-title .accordion-icon,
+.accordion-trigger:hover .accordion-title .accordion-icon {
+  color: var(--blue);
+}
+
+.accordion-trigger[aria-expanded="true"] .accordion-icon {
+  transform: translateY(-50%) rotate(-135deg);
+  color: var(--black);
+}
 
 
-  /* Accordian section */
 
 
 
-  .accordion {
-    margin: 0;
-    padding: 0;
-    border: 2px solid hsl(0deg 0% 52%);
-    border-radius: 7px;
-    width: 20em;
-  }
+.accordion-panel {
+  margin: 0;
+  padding-top: 1.5em;
+  padding-left: 1.5em;
+  padding-right: 3em;
+  border-bottom: 1px solid var(--black);
+}
+
+/* For Edge bug https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/4806035/ */
+.accordion-panel[hidden] {
+  display: none;
+}
+
+.accordion-subsection {
+  margin-bottom: 1rem;
+}
+
+.accordion-list li {
+  padding-bottom: 1rem;
+  line-height: 160%;
+}
+
+.accordion-list {
+  margin-top: 0;
+  padding-left: 0;
+}
+
+::marker {
+  font-weight: 600;
+}
+
+/* h3 {
+  display: inline;
+  font-size: 3rem;
+} */
+
+
+.guidelines {
+
+  padding-bottom: 1rem;
+  /* border-bottom: 1PX solid var(--black); */
+}
+
+.best-practices {}
+
+.best-list {
+  line-height: 1.6rem;
+  padding: .5rem;
+}
+
+.column {
+  float: left;
+  box-sizing: border-box;
+
+}
+
+.left {
+  width: 25%;
+  padding-right: 2rem;
+  /* border-top: 2px solid var(--black); */
+}
+
+.right {
+  width: 75%;
+}
+
+.fifty {
+  width: 50%;
+  padding-right: 1rem;
+}
+
+.row {
+  /* padding-top: 1rem; */
+  padding-bottom: 3rem;
   
-  .accordion h3 {
-    margin: 0;
-    padding: 0;
-  }
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.button {
   
-  .accordion:focus-within {
-    border-color: hsl(216deg 94% 43%);
-  }
-  
-  .accordion:focus-within h3 {
-    background-color: hsl(0deg 0% 97%);
-  }
-  
-  .accordion > * + * {
-    border-top: 1px solid hsl(0deg 0% 52%);
-  }
-  
-  .accordion-trigger {
-    background: none;
-    color: hsl(0deg 0% 13%);
-    display: block;
-    font-size: 1rem;
-    font-weight: normal;
-    margin: 0;
-    padding: 1em 1.5em;
-    position: relative;
-    text-align: left;
+  background-color: var(--background);
+  color: var(--black);
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  border: 2px solid var(--black);
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.button:hover {
+  background: var(--black);
+  color: var(--background);
+
+}
+
+.wcag-p {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+
+/* Resources section */
+
+.resources-title {
+  display: block;
+  pointer-events: none;
+  border: transparent 2px solid;
+  border-radius: 5px;
+  padding-top: 0.25em;
+  outline: none;
+  color: var(--black);
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
     width: 100%;
-    outline: none;
   }
-  
-  .accordion-trigger:focus,
-  .accordion-trigger:hover {
-    background: hsl(216deg 94% 94%);
-  }
-  
-  .accordion-trigger:focus {
-    outline: 4px solid transparent;
-  }
-  
-  .accordion > *:first-child .accordion-trigger,
-  .accordion > *:first-child {
-    border-radius: 5px 5px 0 0;
-  }
-  
-  .accordion > *:last-child .accordion-trigger,
-  .accordion > *:last-child {
-    border-radius: 0 0 5px 5px;
-  }
-  
-  button {
-    border-style: none;
-  }
-  
-  .accordion button::-moz-focus-inner {
-    border: 0;
-  }
-  
-  .accordion-title {
-    display: block;
-    pointer-events: none;
-    border: transparent 2px solid;
-    border-radius: 5px;
-    padding: 0.25em;
-    outline: none;
-  }
-  
-  .accordion-trigger:focus .accordion-title {
-    border-color: hsl(216deg 94% 43%);
-  }
-  
-  .accordion-icon {
-    border: solid currentcolor;
-    border-width: 0 2px 2px 0;
-    height: 0.5rem;
-    pointer-events: none;
-    position: absolute;
-    right: 2em;
-    top: 50%;
-    transform: translateY(-60%) rotate(45deg);
-    width: 0.5rem;
-  }
-  
-  .accordion-trigger:focus .accordion-icon,
-  .accordion-trigger:hover .accordion-icon {
-    border-color: hsl(216deg 94% 43%);
-  }
-  
-  .accordion-trigger[aria-expanded="true"] .accordion-icon {
-    transform: translateY(-50%) rotate(-135deg);
-  }
-  
-  .accordion-panel {
-    margin: 0;
-    padding: 1em 1.5em;
-  }
-  
-  /* For Edge bug https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/4806035/ */
-  .accordion-panel[hidden] {
+
+  .right hr {
     display: none;
   }
-  
-  fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-  }
-  
-  input {
-    border: 1px solid hsl(0deg 0% 42%);
-    border-radius: 0.3em;
+}
+
+
+/* Style the navigation bar */
+.navbar {
+  width: 100%;
+  overflow: auto;
+  padding-bottom: 1rem;
+  /* border-bottom: 1px solid var(--black); */
+}
+
+/* Navbar links */
+.navbar a {
+  float: left;
+  text-align: center;
+  padding-right: 2rem;
+  padding-top: 12px;
+  color:var(--black);
+  text-decoration: none;
+  vertical-align: middle;
+  font-size: .85rem;
+}
+
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.navbar-icon {
+  display: inline-block;
+  height: 4vh;
+  width: auto;
+  margin-right: 4px;
+  vertical-align: middle;
+  padding-right: .25rem;
+}
+
+/* Current/active navbar link
+.active {
+  background-color: #04AA6D;
+} */
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 600px) {
+  .navbar a {
     display: block;
-    font-size: inherit;
-    padding: 0.3em 0.5em;
-  }
-  
-
-
-
-  h3 {
-    display: inline;
-  }
-  
-  .active:after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
   }
 
-  .guidelines {
-    
-    padding-bottom: 1rem;
-    border-bottom: 1PX solid var(--black);
+  h1 {
+    font-size: calc(100vw / 8);
   }
-
-  .best-practices {
-
-  }
-
-  .best-list {
-    line-height: 1.6rem;
-    padding: .5rem;
-  }
-
-  .WCAG-Link {
-    font-size: 18px;
-  } 
+}
